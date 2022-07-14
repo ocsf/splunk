@@ -1,10 +1,10 @@
 {
-  "name": "Finding",
-  "type": "finding",
+  "caption": "Finding",
+  "name": "finding",
   "description": "The finding object describes the results of detections or analytics.",
   "attributes": {
     "uid": {
-      "name": "UID",
+      "caption": "UID",
       "description": "The unique identifier of the finding."
     },
     "type": {
@@ -51,13 +51,13 @@
       "requirement": "required",
       "enum": {
         "1": {
-          "name": "Rule"
+          "caption": "Rule"
         },
         "2": {
-          "name": "Behavior"
+          "caption": "Behavior"
         },
         "3": {
-          "name": "Information"
+          "caption": "Information"
         }
       }
     }

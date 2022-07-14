@@ -1,6 +1,6 @@
 {
-  "name": "Splunk Fields",
-  "type": "splunk",
+  "caption": "Splunk Fields",
+  "name": "splunk",
   "description": "The Account object.",
   "attributes": {
     "host": {

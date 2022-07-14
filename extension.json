@@ -1,6 +1,6 @@
 {
-  "name": "Splunk",
-  "type": "splunk",
+  "caption": "Splunk",
+  "name": "splunk",
   "version": "1.0.0",
   "uid": 1
 }

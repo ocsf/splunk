@@ -2,23 +2,23 @@
   "enum": {
     "-1": {
       "description": "The priority is not normalized.",
-      "name": "Other"
+      "caption": "Other"
     },
     "0": {
       "description": "No priority is assigned.",
-      "name": "Unknown"
+      "caption": "Unknown"
     },
     "1": {
-      "name": "Low"
+      "caption": "Low"
     },
     "2": {
-      "name": "Medium"
+      "caption": "Medium"
     },
     "3": {
-      "name": "High"
+      "caption": "High"
     },
     "4": {
-      "name": "Critical"
+      "caption": "Critical"
     }
   }
 }

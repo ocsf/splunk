@@ -1,6 +1,6 @@
 {
-  "name": "User Entity",
-  "type": "user_entity",
+  "caption": "User Entity",
+  "name": "user_entity",
   "description": "The user entity object represents a real user in an organizational network environment.",
   "attributes": {
     "names": {
@@ -20,7 +20,7 @@
       "requirement": "optional"
     },
     "end_time": {
-      "name": "End Date",
+      "caption": "End Date",
       "description": "The end or termination date of the user."
     },
     "first_name": {
@@ -73,7 +73,7 @@
       "requirement": "recommended"
     },
     "start_time": {
-      "name": "Start Date",
+      "caption": "Start Date",
       "description": "The start or hire date of the user."
     },
     "suffix": {

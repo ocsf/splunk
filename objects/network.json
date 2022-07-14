@@ -1,6 +1,6 @@
 {
-  "name": "Network",
-  "type": "network",
+  "caption": "Network",
+  "name": "network",
   "description": "The network object describes a network identified by a subnet mask.",
   "attributes": {
     "name": {
@@ -56,19 +56,19 @@
       "requirement": "required",
       "enum": {
         "0": {
-          "name": "Unknown"
+          "caption": "Unknown"
         },
         "1": {
-          "name": "Wired"
+          "caption": "Wired"
         },
         "2": {
-          "name": "Wireless"
+          "caption": "Wireless"
         },
         "3": {
-          "name": "Mobile"
+          "caption": "Mobile"
         },
         "-1": {
-          "name": "Other"
+          "caption": "Other"
         }
       }
     }

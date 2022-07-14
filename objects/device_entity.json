@@ -1,6 +1,6 @@
 {
-  "name": "Device Entity",
-  "type": "device_entity",
+  "caption": "Device Entity",
+  "name": "device_entity",
   "description": "A device of the environment that supports information-related activities. Devices should be protected from illicit access, use, disclosure, alteration, destruction, and/or theft, resulting in loss to the organization.",
   "attributes": {
     "caption": {
@@ -8,17 +8,17 @@
     },
     "desc": {
       "description": "The description of the device, ordinarily as reported by the operating system.",
-      "name": "Description",
+      "caption": "Description",
       "requirement": "optional"
     },
     "domain": {
       "description": "The network domain where the device resides. For example: <code>work.example.com</code>.",
-      "name": "Domain",
+      "caption": "Domain",
       "requirement": "optional"
     },
     "group": {
       "description": "The name of the group to which the device belongs. For example: <code>Windows Laptops<code/>.",
-      "name": "Group",
+      "caption": "Group",
       "requirement": "optional"
     },
     "labels": {
@@ -61,61 +61,61 @@
     },
     "type": {
       "description": "The original type assigned to the device.",
-      "name": "Type",
+      "caption": "Type",
       "requirement": "required"
     },
     "type_id": {
       "description": "The device type identifier.",
       "enum": {
         "1": {
-          "name": "Server"
+          "caption": "Server"
         },
         "10": {
-          "name": "Sharepoint Server"
+          "caption": "Sharepoint Server"
         },
         "11": {
-          "name": "VPN Server"
+          "caption": "VPN Server"
         },
         "12": {
-          "name": "Web Server"
+          "caption": "Web Server"
         },
         "13": {
-          "name": "Proxy Server"
+          "caption": "Proxy Server"
         },
         "14": {
-          "name": "Active Directory"
+          "caption": "Active Directory"
         },
         "2": {
-          "name": "Desktop"
+          "caption": "Desktop"
         },
         "3": {
-          "name": "Laptop"
+          "caption": "Laptop"
         },
         "4": {
-          "name": "Tablet"
+          "caption": "Tablet"
         },
         "5": {
-          "name": "Mobile"
+          "caption": "Mobile"
         },
         "6": {
-          "name": "Virtual Machine"
+          "caption": "Virtual Machine"
         },
         "7": {
-          "name": "IOT"
+          "caption": "IOT"
         },
         "8": {
-          "name": "File Server"
+          "caption": "File Server"
         },
         "9": {
-          "name": "Network Router"
+          "caption": "Network Router"
         }
       },
-      "name": "Type ID",
+      "caption": "Type ID",
       "requirement": "required"
     },
     "uid": {
       "description": "The unique identifier of the device.",
-      "name": "Device UID",
+      "caption": "Device UID",
       "requirement": "required"
     }
   }

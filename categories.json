@@ -1,10 +1,10 @@
 {
-  "name": "Splunk Categories",
-  "type": "category",
+  "caption": "Splunk Categories",
+  "name": "category",
   "description": "The Splunk event categories.",
   "attributes": {
     "finding": {
-      "name": "Finding",
+      "caption": "Finding",
       "description": "Finding events report the results of detections or analytics. The Finding classes inherit from an abstract Conclusion class.",
       "uid": 1
     }

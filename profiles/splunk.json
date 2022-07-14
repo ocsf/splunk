@@ -1,5 +1,5 @@
 {
-  "name": "Splunk Attributes",
+  "caption": "Splunk Attributes",
   "description": "The Splunk internal attributes.",
   "annotations": {
     "group": "splunk"
@@ -33,7 +33,7 @@
   "apply-to": {
     "classes": [
       {
-        "name": "event"
+        "caption": "event"
       }
     ]
   }
