@@ -1,261 +1,259 @@
 {
   "caption": "Attribute Dictionary",
-  "name": "dictionary",
   "description": "The Attribute Dictionary defines schema attributes and includes references to the events and objects in which they are used.",
+  "name": "dictionary",
   "attributes": {
     "accounts": {
+      "caption": "User Accounts",
       "description": "The user accounts associated with the person.",
       "is_array": true,
-      "caption": "User Accounts",
-      "object_type": "user",
-      "type": "object_t"
+      "type": "user"
     },
     "context": {
+      "caption": "Context",
       "description": "The list of the context categories of the finding.",
       "is_array": true,
-      "caption": "Context",
       "type": "string_t"
     },
     "context_ids": {
+      "caption": "Context IDs",
       "description": "The list of the context identifiers of the finding.",
       "enum": {
         "-1": {
-          "description": "The category label identifier is not in the predefined list. See the <code>labels</code> attribute, which may contain additional category labels.",
-          "caption": "Other"
+          "caption": "Other",
+          "description": "The category label identifier is not in the predefined list. See the <code>labels</code> attribute, which may contain additional category labels."
         },
         "0": {
-          "description": "The context identifier is unknown",
-          "caption": "Unknown"
+          "caption": "Unknown",
+          "description": "The context identifier is unknown"
         },
         "10": {
-          "description": "Antivirus, Firewall, or some other protection software running on a device.",
-          "caption": "Source: Endpoint"
+          "caption": "Source: Endpoint",
+          "description": "Antivirus, Firewall, or some other protection software running on a device."
         },
         "11": {
-          "description": "Microsoft Active Directory.",
-          "caption": "Source: AD"
+          "caption": "Source: AD",
+          "description": "Microsoft Active Directory."
         },
         "12": {
-          "description": "Network Based Firewall or system that provides information about network connections beyond hostnames or IP addresses. For example Netflow, DNS, and web proxy logs.",
-          "caption": "Source: Firewall"
+          "caption": "Source: Firewall",
+          "description": "Network Based Firewall or system that provides information about network connections beyond hostnames or IP addresses. For example Netflow, DNS, and web proxy logs."
         },
         "13": {
-          "description": "Single application data log. For example Apache, JIRA, or Firefox logs. This label can be applied along with another source category label. The Application Log category does not include general operating system logs.",
-          "caption": "Source: Application Log"
+          "caption": "Source: Application Log",
+          "description": "Single application data log. For example Apache, JIRA, or Firefox logs. This label can be applied along with another source category label. The Application Log category does not include general operating system logs."
         },
         "14": {
-          "description": "Network based IDS/IPS. This is also a generic category label for \"product of external security logic.\" If the detection was based on the IP addresses, bytes, or security zone from PAN logs, only Firewall would apply.  If PAN categorized the event as malware detection and you relied on that determination, then IPS label would also apply. The one exception to this is Endpoint.",
-          "caption": "Source: IPS"
+          "caption": "Source: IPS",
+          "description": "Network based IDS/IPS. This is also a generic category label for \"product of external security logic.\" If the detection was based on the IP addresses, bytes, or security zone from PAN logs, only Firewall would apply.  If PAN categorized the event as malware detection and you relied on that determination, then IPS label would also apply. The one exception to this is Endpoint."
         },
         "15": {
-          "description": "Cloud data logs. For example Amazon, Box, Office365, etc.",
-          "caption": "Source: Cloud Data"
+          "caption": "Source: Cloud Data",
+          "description": "Cloud data logs. For example Amazon, Box, Office365, etc."
         },
         "16": {
-          "description": "Multiple data source types or the underlying source is unknown.",
-          "caption": "Source: Correlation"
+          "caption": "Source: Correlation",
+          "description": "Multiple data source types or the underlying source is unknown."
         },
         "17": {
-          "description": "Printer logs.",
-          "caption": "Source: Printer"
+          "caption": "Source: Printer",
+          "description": "Printer logs."
         },
         "18": {
-          "description": "Physical access control logs.",
-          "caption": "Source: Badge"
+          "caption": "Source: Badge",
+          "description": "Physical access control logs."
         },
         "20": {
-          "description": "The finding has a network component and the direction of the initiated connection or traffic is internal (both endpoints are considered internal, on-premises).",
-          "caption": "Scope: Internal"
+          "caption": "Scope: Internal",
+          "description": "The finding has a network component and the direction of the initiated connection or traffic is internal (both endpoints are considered internal, on-premises)."
         },
         "21": {
-          "description": "The finding has a network component and the direction of the initiated connection or traffic is external (both endpoints are considered external). For example cloud data with an external source.",
-          "caption": "Scope: External"
+          "caption": "Scope: External",
+          "description": "The finding has a network component and the direction of the initiated connection or traffic is external (both endpoints are considered external). For example cloud data with an external source."
         },
         "22": {
-          "description": "The finding has a network component and the direction of the initiated connection or traffic is inbound (one of the endpoints is internal and the other one is external).",
-          "caption": "Scope: Inbound"
+          "caption": "Scope: Inbound",
+          "description": "The finding has a network component and the direction of the initiated connection or traffic is inbound (one of the endpoints is internal and the other one is external)."
         },
         "23": {
-          "description": "The finding has a network component and the direction of the initiated connection or traffic is outbound (one of the endpoints is internal and the other one is external).",
-          "caption": "Scope: Outbound"
+          "caption": "Scope: Outbound",
+          "description": "The finding has a network component and the direction of the initiated connection or traffic is outbound (one of the endpoints is internal and the other one is external)."
         },
         "24": {
-          "description": "The finding has no network component. For example a local privilege escalation or a badge based detection.",
-          "caption": "Scope: Local"
+          "caption": "Scope: Local",
+          "description": "The finding has no network component. For example a local privilege escalation or a badge based detection."
         },
         "25": {
-          "description": "The finding has a network component, but the direction of the initiated connection or traffic is unknown.",
-          "caption": "Scope: Network"
+          "caption": "Scope: Network",
+          "description": "The finding has a network component, but the direction of the initiated connection or traffic is unknown."
         },
         "30": {
-          "description": "Unsuccessful or blocked security malware.",
-          "caption": "Outcome: Blocked"
+          "caption": "Outcome: Blocked",
+          "description": "Unsuccessful or blocked security malware."
         },
         "31": {
-          "description": "Malware was not blocked. This is the default, if this category is not explicitly set, then it is assumed to be Allowed.",
-          "caption": "Outcome: Allowed"
+          "caption": "Outcome: Allowed",
+          "description": "Malware was not blocked. This is the default, if this category is not explicitly set, then it is assumed to be Allowed."
         },
         "40": {
-          "description": "The reconnaissance stage, such as scanning, DNS enumeration, or other observable attempts to gain information about the customer's network.",
-          "caption": "Stage: Recon"
+          "caption": "Stage: Recon",
+          "description": "The reconnaissance stage, such as scanning, DNS enumeration, or other observable attempts to gain information about the customer's network."
         },
         "41": {
-          "description": "The initial access tactic represents the vectors adversaries use to gain an initial foothold within a network.",
-          "caption": "Stage: Initial Access"
+          "caption": "Stage: Initial Access",
+          "description": "The initial access tactic represents the vectors adversaries use to gain an initial foothold within a network."
         },
         "42": {
-          "description": "The execution tactic represents techniques that result in execution of adversary-controlled code on a local or remote system. This tactic is often used in conjunction with initial access as the means of executing code once access is obtained, and lateral movement to expand access to remote systems on a network.",
-          "caption": "Stage: Execution"
+          "caption": "Stage: Execution",
+          "description": "The execution tactic represents techniques that result in execution of adversary-controlled code on a local or remote system. This tactic is often used in conjunction with initial access as the means of executing code once access is obtained, and lateral movement to expand access to remote systems on a network."
         },
         "43": {
-          "description": "Persistence is any access, action, or configuration change to a system that gives an adversary a persistent presence on that system. Adversaries will often need to maintain access to systems through interruptions such as system restarts, loss of credentials, or other failures that would require a remote access tool to restart or alternate backdoor for them to regain access.",
-          "caption": "Stage: Persistence"
+          "caption": "Stage: Persistence",
+          "description": "Persistence is any access, action, or configuration change to a system that gives an adversary a persistent presence on that system. Adversaries will often need to maintain access to systems through interruptions such as system restarts, loss of credentials, or other failures that would require a remote access tool to restart or alternate backdoor for them to regain access."
         },
         "44": {
-          "description": "Privilege escalation is the result of actions that allows an adversary to obtain a higher level of permissions on a system or network. Certain tools or actions require a higher level of privilege to work and are likely necessary at many points throughout an operation. Adversaries can enter a system with unprivileged access and must take advantage of a system weakness to obtain local administrator or SYSTEM/root level privileges. A user account with administrator-like access can also be used. User accounts with permissions to access specific systems or perform specific functions necessary for adversaries to achieve their objective may also be considered an escalation of privilege.",
-          "caption": "Stage: Privilege Escalation"
+          "caption": "Stage: Privilege Escalation",
+          "description": "Privilege escalation is the result of actions that allows an adversary to obtain a higher level of permissions on a system or network. Certain tools or actions require a higher level of privilege to work and are likely necessary at many points throughout an operation. Adversaries can enter a system with unprivileged access and must take advantage of a system weakness to obtain local administrator or SYSTEM/root level privileges. A user account with administrator-like access can also be used. User accounts with permissions to access specific systems or perform specific functions necessary for adversaries to achieve their objective may also be considered an escalation of privilege."
         },
         "45": {
-          "description": "Defense evasion consists of techniques an adversary may use to evade detection or avoid other defenses. Sometimes these actions are the same as or variations of techniques in other categories that have the added benefit of subverting a particular defense or mitigation. Defense evasion may be considered a set of attributes the adversary applies to all other phases of the operation.",
-          "caption": "Stage: Defense Evasion"
+          "caption": "Stage: Defense Evasion",
+          "description": "Defense evasion consists of techniques an adversary may use to evade detection or avoid other defenses. Sometimes these actions are the same as or variations of techniques in other categories that have the added benefit of subverting a particular defense or mitigation. Defense evasion may be considered a set of attributes the adversary applies to all other phases of the operation."
         },
         "46": {
-          "description": "Credential access represents techniques resulting in access to or control over system, domain, or service credentials that are used within an enterprise environment. Adversaries will likely attempt to obtain legitimate credentials from users or administrator accounts (local system administrator or domain users with administrator access) to use within the network. This allows the adversary to assume the identity of the account, with all of that account's permissions on the system and network, and makes it harder for defenders to detect the adversary. With sufficient access within a network, an adversary can create accounts for later use within the environment.",
-          "caption": "Stage: Credential Access"
+          "caption": "Stage: Credential Access",
+          "description": "Credential access represents techniques resulting in access to or control over system, domain, or service credentials that are used within an enterprise environment. Adversaries will likely attempt to obtain legitimate credentials from users or administrator accounts (local system administrator or domain users with administrator access) to use within the network. This allows the adversary to assume the identity of the account, with all of that account's permissions on the system and network, and makes it harder for defenders to detect the adversary. With sufficient access within a network, an adversary can create accounts for later use within the environment."
         },
         "47": {
-          "description": "Discovery consists of techniques that allow the adversary to gain knowledge about the system and internal network. When adversaries gain access to a new system, they must orient themselves to what they now have control of and what benefits operating from that system give to their current objective or overall goals during the intrusion. The operating system provides many native tools that aid in this post-compromise information-gathering phase.",
-          "caption": "Stage: Discovery"
+          "caption": "Stage: Discovery",
+          "description": "Discovery consists of techniques that allow the adversary to gain knowledge about the system and internal network. When adversaries gain access to a new system, they must orient themselves to what they now have control of and what benefits operating from that system give to their current objective or overall goals during the intrusion. The operating system provides many native tools that aid in this post-compromise information-gathering phase."
         },
         "48": {
-          "description": "Lateral movement consists of techniques that enable an adversary to access and control remote systems on a network and could, but does not necessarily, include execution of tools on remote systems. The lateral movement techniques could allow an adversary to gather information from a system without needing additional tools, such as a remote access tool.",
-          "caption": "Stage: Lateral Movement"
+          "caption": "Stage: Lateral Movement",
+          "description": "Lateral movement consists of techniques that enable an adversary to access and control remote systems on a network and could, but does not necessarily, include execution of tools on remote systems. The lateral movement techniques could allow an adversary to gather information from a system without needing additional tools, such as a remote access tool."
         },
         "49": {
-          "description": "Collection consists of techniques used to identify and gather information, such as sensitive files, from a target network prior to exfiltration. This category also covers locations on a system or network where the adversary may look for information to exfiltrate.",
-          "caption": "Stage: Collection"
+          "caption": "Stage: Collection",
+          "description": "Collection consists of techniques used to identify and gather information, such as sensitive files, from a target network prior to exfiltration. This category also covers locations on a system or network where the adversary may look for information to exfiltrate."
         },
         "50": {
-          "description": "Exfiltration refers to techniques and attributes that result or aid in the adversary removing files and information from a target network. This category also covers locations on a system or network where the adversary may look for information to exfiltrate.",
-          "caption": "Stage: Exfiltration"
+          "caption": "Stage: Exfiltration",
+          "description": "Exfiltration refers to techniques and attributes that result or aid in the adversary removing files and information from a target network. This category also covers locations on a system or network where the adversary may look for information to exfiltrate."
         },
         "51": {
-          "description": "The command and control tactic represents how adversaries communicate with systems under their control within a target network. There are many ways an adversary can establish command and control with various levels of covertness, depending on system configuration and network topology. Due to the wide degree of variation available to the adversary at the network level, only the most common factors were used to describe the differences in command and control. There are still a great many specific techniques within the documented methods, largely due to how easy it is to define new protocols and use existing, legitimate protocols and network services for communication.",
-          "caption": "Stage: Command And Control"
+          "caption": "Stage: Command And Control",
+          "description": "The command and control tactic represents how adversaries communicate with systems under their control within a target network. There are many ways an adversary can establish command and control with various levels of covertness, depending on system configuration and network topology. Due to the wide degree of variation available to the adversary at the network level, only the most common factors were used to describe the differences in command and control. There are still a great many specific techniques within the documented methods, largely due to how easy it is to define new protocols and use existing, legitimate protocols and network services for communication."
         },
         "60": {
-          "description": "Installation of malware on one of the included devices.",
-          "caption": "Consequence: Infection"
+          "caption": "Consequence: Infection",
+          "description": "Installation of malware on one of the included devices."
         },
         "61": {
-          "description": "Reduction in log output or other data used for detection. Implies a deliberate attempt to hide an attackers actions.",
-          "caption": "Consequence: Reduced Visibility"
+          "caption": "Consequence: Reduced Visibility",
+          "description": "Reduction in log output or other data used for detection. Implies a deliberate attempt to hide an attackers actions."
         },
         "62": {
-          "description": "Destruction of data- either thru deletion or encryption.  This is distinctly different from Reduced Visibility, because the goal is to destroy the data, not to hide activity.",
-          "caption": "Consequence: Data Destruction"
+          "caption": "Consequence: Data Destruction",
+          "description": "Destruction of data- either thru deletion or encryption.  This is distinctly different from Reduced Visibility, because the goal is to destroy the data, not to hide activity."
         },
         "63": {
-          "description": "Asset no longer performs it's normal functions.",
-          "caption": "Consequence: Denial Of Service"
+          "caption": "Consequence: Denial Of Service",
+          "description": "Asset no longer performs it's normal functions."
         },
         "64": {
-          "description": "Asset is no longer under a customer's control.",
-          "caption": "Consequence: Loss Of Control"
+          "caption": "Consequence: Loss Of Control",
+          "description": "Asset is no longer under a customer's control."
         },
         "70": {
-          "description": "There was a rare user involved in this finding. This will typically be applied to a finding based on other entities (device, printer, service, etc.).",
-          "caption": "Rares: Rare User"
+          "caption": "Rares: Rare User",
+          "description": "There was a rare user involved in this finding. This will typically be applied to a finding based on other entities (device, printer, service, etc.)."
         },
         "71": {
-          "description": "There was a rare process or application involved in this finding. This can apply to app detection like PAN or Blue Coat, process names, or PIDs. It can also be used with hashes or any other other method of uniquely identifying executable code.",
-          "caption": "Rares: Rare Process"
+          "caption": "Rares: Rare Process",
+          "description": "There was a rare process or application involved in this finding. This can apply to app detection like PAN or Blue Coat, process names, or PIDs. It can also be used with hashes or any other other method of uniquely identifying executable code."
         },
         "72": {
-          "description": "There was a rare physical device or virtual machine involved in this finding. This can be set if you are working with endpoint data, relying on identity resolution, or have a way to identify individual machines/instances. If you are relying on IP/Network or domains for determination, the more specific RareNetwork or RareDomain should be used.",
-          "caption": "Rares: Rare Device"
+          "caption": "Rares: Rare Device",
+          "description": "There was a rare physical device or virtual machine involved in this finding. This can be set if you are working with endpoint data, relying on identity resolution, or have a way to identify individual machines/instances. If you are relying on IP/Network or domains for determination, the more specific RareNetwork or RareDomain should be used."
         },
         "73": {
-          "description": "There was a rare domain involved in this finding. This can be an Active Directory domain, a DNS domain, a Kerberos realm, or a tenant identifier. Use domain for logical groupings of devices.",
-          "caption": "Rares: Rare Domain"
+          "caption": "Rares: Rare Domain",
+          "description": "There was a rare domain involved in this finding. This can be an Active Directory domain, a DNS domain, a Kerberos realm, or a tenant identifier. Use domain for logical groupings of devices."
         },
         "74": {
-          "description": "There was a rare network involved in this finding. This can be based on IP/Network blocks, firewall zones, Netflow interfaces, or other indicators based on routing packets.",
-          "caption": "Rares: Rare Network"
+          "caption": "Rares: Rare Network",
+          "description": "There was a rare network involved in this finding. This can be based on IP/Network blocks, firewall zones, Netflow interfaces, or other indicators based on routing packets."
         },
         "75": {
-          "description": "There was a rare location involved in this finding. This can be a GeoLocation based on IP/Endpoint or a physical location based on Badge data.",
-          "caption": "Rares: Rare Location"
+          "caption": "Rares: Rare Location",
+          "description": "There was a rare location involved in this finding. This can be a GeoLocation based on IP/Endpoint or a physical location based on Badge data."
         },
         "80": {
-          "description": "The finding also considered the behavior of the user's peers.",
-          "caption": "Other: Peer Group"
+          "caption": "Other: Peer Group",
+          "description": "The finding also considered the behavior of the user's peers."
         },
         "81": {
-          "description": "Attempt to gain access to a system by making a high volume of login attempts.",
-          "caption": "Other: Brute Force"
+          "caption": "Other: Brute Force",
+          "description": "Attempt to gain access to a system by making a high volume of login attempts."
         },
         "82": {
-          "description": "Violation of a company policy.",
-          "caption": "Other: Policy Violation"
+          "caption": "Other: Policy Violation",
+          "description": "Violation of a company policy."
         },
         "83": {
-          "description": "The finding is based on external intelligence source as having an indicator of compromise, threatening location, or security malware.",
-          "caption": "Other: Threat Intelligence"
+          "caption": "Other: Threat Intelligence",
+          "description": "The finding is based on external intelligence source as having an indicator of compromise, threatening location, or security malware."
         },
         "84": {
-          "description": "This finding indicates that the user may plan on leaving the organization.",
-          "caption": "Other: Flight Risk"
+          "caption": "Other: Flight Risk",
+          "description": "This finding indicates that the user may plan on leaving the organization."
         },
         "85": {
-          "description": "The finding concerns USB drive or other physical storage capable of easy removal.",
-          "caption": "Other: Removable Storage"
+          "caption": "Other: Removable Storage",
+          "description": "The finding concerns USB drive or other physical storage capable of easy removal."
         }
       },
       "is_array": true,
-      "caption": "Context IDs",
       "type": "integer_t"
     },
-    "emails": {
-      "description": "A list of emails of the person.",
-      "is_array": true,
-      "caption": "Emails",
-      "type": "email_t"
-    },
     "device_entities": {
+      "caption": "Device Entities",
       "description": "The devices that are identified in reported the events.",
       "is_array": true,
-      "caption": "Device Entities",
-      "object_type": "device_entity",
-      "type": "object_t"
+      "type": "device_entity"
+    },
+    "emails": {
+      "caption": "Emails",
+      "description": "A list of emails of the person.",
+      "is_array": true,
+      "type": "email_t"
     },
     "finding": {
-      "description": "The finding reported by detection or analytics",
       "caption": "Finding",
-      "object_type": "finding",
-      "type": "object_t"
+      "description": "The finding reported by detection or analytics",
+      "type": "finding"
     },
     "first_name": {
-      "description": "The first name of a person.",
       "caption": "First Name",
+      "description": "The first name of a person.",
       "type": "string_t"
     },
     "host": {
-      "description": "The originating hostname or IP address of the network device that generated the event.",
       "caption": "Host",
+      "description": "The originating hostname or IP address of the network device that generated the event.",
       "type": "string_t"
     },
     "impact": {
-      "description": "The impact of the finding, valid range 0-100.",
       "caption": "Impact",
+      "description": "The impact of the finding, valid range 0-100.",
       "type": "integer_t"
     },
     "impact_id": {
+      "caption": "Impact ID",
       "description": "The normalized impact of the finding.",
       "enum": {
         "-1": {
-          "description": "The finding impact is not mapped. See the <code>impact</code> attribute, which contains a data source specific value.",
-          "caption": "Other"
+          "caption": "Other",
+          "description": "The finding impact is not mapped. See the <code>impact</code> attribute, which contains a data source specific value."
         },
         "0": {
           "caption": "Unknown"
@@ -276,87 +274,85 @@
           "caption": "Fatal"
         }
       },
-      "caption": "Impact ID",
       "type": "integer_t"
     },
     "index": {
-      "description": "The name of the index in which a given event is indexed.",
       "caption": "Index",
+      "description": "The name of the index in which a given event is indexed.",
       "type": "string_t"
     },
     "is_public": {
-      "description": "The indication of whether the network interface is a public IP address.",
       "caption": "Public Network",
+      "description": "The indication of whether the network interface is a public IP address.",
       "type": "boolean_t"
     },
     "last_name": {
-      "description": "The last name of a person.",
       "caption": "Last Name",
+      "description": "The last name of a person.",
       "type": "string_t"
     },
     "linecount": {
-      "description": "The number of lines an event contains. That is the number of lines an event contains before it is indexed.",
       "caption": "Line Count",
+      "description": "The number of lines an event contains. That is the number of lines an event contains before it is indexed.",
       "type": "integer_t"
     },
     "managed_by": {
-      "description": "The distinguished name of the user that is assigned to manage this object.",
       "caption": "Managed By",
+      "description": "The distinguished name of the user that is assigned to manage this object.",
       "type": "string_t"
     },
     "names": {
+      "caption": "Names",
       "description": "The names of the person.",
       "is_array": true,
-      "caption": "Names",
       "type": "string_t"
     },
     "nickname": {
-      "description": "The nickname of a person.",
       "caption": "Nickname",
+      "description": "The nickname of a person.",
       "type": "string_t"
     },
-    "user_entities": {
-      "description": "The users that are identified in reported the events.",
-      "is_array": true,
-      "caption": "User Entities",
-      "object_type": "user_entity",
-      "type": "object_t"
-    },
     "phones": {
+      "caption": "Phones",
       "description": "The list of phone numbers.",
       "is_array": true,
-      "caption": "Phones",
       "type": "string_t"
     },
     "punct": {
-      "description": "The punctuation pattern that is extracted from an event. The punctuation pattern is unique to types of events.",
       "caption": "Punctuation Pattern ",
+      "description": "The punctuation pattern that is extracted from an event. The punctuation pattern is unique to types of events.",
       "type": "string_t"
     },
     "source": {
-      "description": "The name of the file, stream, or other input from which the event originates. For data monitored from files and directories, the value of source is the full path, such as `/archive/server1/var/log/messages.0` or `/var/log/`. The value of source for network-based data sources is the protocol and port, such as UDP:514.",
       "caption": "Event Source",
+      "description": "The name of the file, stream, or other input from which the event originates. For data monitored from files and directories, the value of source is the full path, such as `/archive/server1/var/log/messages.0` or `/var/log/`. The value of source for network-based data sources is the protocol and port, such as UDP:514.",
       "type": "string_t"
     },
     "sourcetype": {
-      "description": "The format of the data input from which the event originates, such as `access_combined` or `cisco_syslog`. The source type controls how the Splunk platform formats incoming data. [List of pretrained source types - Splunk Documentation](https://docs.splunk.com/Documentation/Splunk/8.2.3/Data/Listofpretrainedsourcetypes)",
       "caption": "Source Type",
+      "description": "The format of the data input from which the event originates, such as `access_combined` or `cisco_syslog`. The source type controls how the Splunk platform formats incoming data. [List of pretrained source types - Splunk Documentation](https://docs.splunk.com/Documentation/Splunk/8.2.3/Data/Listofpretrainedsourcetypes)",
       "type": "string_t"
     },
     "splunk_server": {
-      "description": "The name of the Splunk server containing the event. Useful in a distributed Splunk environment.",
       "caption": "Splunk Server",
+      "description": "The name of the Splunk server containing the event. Useful in a distributed Splunk environment.",
       "type": "string_t"
     },
     "suffix": {
-      "description": "The suffix of a person. For example: <code>M.D.</code> or <code>Ph.D.</code>.",
       "caption": "Suffix",
+      "description": "The suffix of a person. For example: <code>M.D.</code> or <code>Ph.D.</code>.",
       "type": "string_t"
     },
     "timestamp": {
-      "description": "The event's timestamp, which specifies the time at which the event occurred.",
       "caption": "Event Timestamp",
+      "description": "The event's timestamp, which specifies the time at which the event occurred.",
       "type": "string_t"
+    },
+    "user_entities": {
+      "caption": "User Entities",
+      "description": "The users that are identified in reported the events.",
+      "is_array": true,
+      "type": "user_entity"
     }
   }
 }
