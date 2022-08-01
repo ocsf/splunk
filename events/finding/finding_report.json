@@ -53,10 +53,6 @@
       "description": "The time of the least recent event included in the finding report.",
       "requirement": "recommended"
     },
-    "time": {
-      "description": "The time when the finding was created.",
-      "requirement": "required"
-    },
     "user_entities": {
       "group": "primary"
     }
