@@ -1,15 +1,8 @@
 {
-  "caption": "Finding",
-  "name": "finding",
-  "description": "The finding object describes the results of detections or analytics.",
+  "caption": "Detection",
+  "name": "detection",
+  "description": "The detection object describes the results of detections or analytics.",
   "attributes": {
-    "uid": {
-      "caption": "UID",
-      "description": "The unique identifier of the finding."
-    },
-    "type": {
-      "description": "The type of the finding."
-    },
     "attacks": {
       "description": "The array of attacks identified by the detections or analytics."
     },
@@ -24,7 +17,7 @@
     },
     "cve_uids": {},
     "desc": {
-      "description": "The description of of detections or analytics that produced the finding."
+      "description": "The description of of detections or analytics that produced the detection."
     },
     "impact": {},
     "impact_id": {
@@ -34,7 +27,7 @@
     "kill_chain_phase_id": {},
     "nist": {},
     "ref_event_uid": {
-      "description": "The identifier of the event associated with a finding.",
+      "description": "The identifier of the event associated with the detection.",
       "requirement": "required"
     },
     "risk_level": {
@@ -46,9 +39,11 @@
     "risk_score": {
       "requirement": "required"
     },
+    "type": {
+      "description": "The type of the detection."
+    },
     "type_id": {
-      "description": "The type of the finding.",
-      "requirement": "required",
+      "description": "The type identifier of the detection.",
       "enum": {
         "1": {
           "caption": "Rule"
@@ -59,7 +54,12 @@
         "3": {
           "caption": "Information"
         }
-      }
+      },
+      "requirement": "required"
+    },
+    "uid": {
+      "caption": "UID",
+      "description": "The unique identifier of the detection."
     }
   }
 }

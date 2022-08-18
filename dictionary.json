@@ -11,13 +11,13 @@
     },
     "context": {
       "caption": "Context",
-      "description": "The list of the context categories of the finding.",
+      "description": "The list of the context categories of the detection.",
       "is_array": true,
       "type": "string_t"
     },
     "context_ids": {
       "caption": "Context IDs",
-      "description": "The list of the context identifiers of the finding.",
+      "description": "The list of the context identifiers of the detection.",
       "enum": {
         "-1": {
           "caption": "Other",
@@ -65,27 +65,27 @@
         },
         "20": {
           "caption": "Scope: Internal",
-          "description": "The finding has a network component and the direction of the initiated connection or traffic is internal (both endpoints are considered internal, on-premises)."
+          "description": "The detection has a network component and the direction of the initiated connection or traffic is internal (both endpoints are considered internal, on-premises)."
         },
         "21": {
           "caption": "Scope: External",
-          "description": "The finding has a network component and the direction of the initiated connection or traffic is external (both endpoints are considered external). For example cloud data with an external source."
+          "description": "The detection has a network component and the direction of the initiated connection or traffic is external (both endpoints are considered external). For example cloud data with an external source."
         },
         "22": {
           "caption": "Scope: Inbound",
-          "description": "The finding has a network component and the direction of the initiated connection or traffic is inbound (one of the endpoints is internal and the other one is external)."
+          "description": "The detection has a network component and the direction of the initiated connection or traffic is inbound (one of the endpoints is internal and the other one is external)."
         },
         "23": {
           "caption": "Scope: Outbound",
-          "description": "The finding has a network component and the direction of the initiated connection or traffic is outbound (one of the endpoints is internal and the other one is external)."
+          "description": "The detection has a network component and the direction of the initiated connection or traffic is outbound (one of the endpoints is internal and the other one is external)."
         },
         "24": {
           "caption": "Scope: Local",
-          "description": "The finding has no network component. For example a local privilege escalation or a badge based detection."
+          "description": "The detection has no network component. For example a local privilege escalation or a badge based detection."
         },
         "25": {
           "caption": "Scope: Network",
-          "description": "The finding has a network component, but the direction of the initiated connection or traffic is unknown."
+          "description": "The detection has a network component, but the direction of the initiated connection or traffic is unknown."
         },
         "30": {
           "caption": "Outcome: Blocked",
@@ -165,31 +165,31 @@
         },
         "70": {
           "caption": "Rares: Rare User",
-          "description": "There was a rare user involved in this finding. This will typically be applied to a finding based on other entities (device, printer, service, etc.)."
+          "description": "There was a rare user involved in this detection. This will typically be applied to a detection based on other entities (device, printer, service, etc.)."
         },
         "71": {
           "caption": "Rares: Rare Process",
-          "description": "There was a rare process or application involved in this finding. This can apply to app detection like PAN or Blue Coat, process names, or PIDs. It can also be used with hashes or any other other method of uniquely identifying executable code."
+          "description": "There was a rare process or application involved in this detection. This can apply to app detection like PAN or Blue Coat, process names, or PIDs. It can also be used with hashes or any other other method of uniquely identifying executable code."
         },
         "72": {
           "caption": "Rares: Rare Device",
-          "description": "There was a rare physical device or virtual machine involved in this finding. This can be set if you are working with endpoint data, relying on identity resolution, or have a way to identify individual machines/instances. If you are relying on IP/Network or domains for determination, the more specific RareNetwork or RareDomain should be used."
+          "description": "There was a rare physical device or virtual machine involved in this detection. This can be set if you are working with endpoint data, relying on identity resolution, or have a way to identify individual machines/instances. If you are relying on IP/Network or domains for determination, the more specific RareNetwork or RareDomain should be used."
         },
         "73": {
           "caption": "Rares: Rare Domain",
-          "description": "There was a rare domain involved in this finding. This can be an Active Directory domain, a DNS domain, a Kerberos realm, or a tenant identifier. Use domain for logical groupings of devices."
+          "description": "There was a rare domain involved in this detection. This can be an Active Directory domain, a DNS domain, a Kerberos realm, or a tenant identifier. Use domain for logical groupings of devices."
         },
         "74": {
           "caption": "Rares: Rare Network",
-          "description": "There was a rare network involved in this finding. This can be based on IP/Network blocks, firewall zones, Netflow interfaces, or other indicators based on routing packets."
+          "description": "There was a rare network involved in this detection. This can be based on IP/Network blocks, firewall zones, Netflow interfaces, or other indicators based on routing packets."
         },
         "75": {
           "caption": "Rares: Rare Location",
-          "description": "There was a rare location involved in this finding. This can be a GeoLocation based on IP/Endpoint or a physical location based on Badge data."
+          "description": "There was a rare location involved in this detection. This can be a GeoLocation based on IP/Endpoint or a physical location based on Badge data."
         },
         "80": {
           "caption": "Other: Peer Group",
-          "description": "The finding also considered the behavior of the user's peers."
+          "description": "The detection also considered the behavior of the user's peers."
         },
         "81": {
           "caption": "Other: Brute Force",
@@ -201,19 +201,24 @@
         },
         "83": {
           "caption": "Other: Threat Intelligence",
-          "description": "The finding is based on external intelligence source as having an indicator of compromise, threatening location, or security malware."
+          "description": "The detection is based on external intelligence source as having an indicator of compromise, threatening location, or security malware."
         },
         "84": {
           "caption": "Other: Flight Risk",
-          "description": "This finding indicates that the user may plan on leaving the organization."
+          "description": "This detection indicates that the user may plan on leaving the organization."
         },
         "85": {
           "caption": "Other: Removable Storage",
-          "description": "The finding concerns USB drive or other physical storage capable of easy removal."
+          "description": "The detection concerns USB drive or other physical storage capable of easy removal."
         }
       },
       "is_array": true,
       "type": "integer_t"
+    },
+    "detection": {
+      "caption": "Detection",
+      "description": "The detection reported by a detection or analytics engine.",
+      "type": "detection"
     },
     "detection_end_time": {
       "caption": "Detection Start Time",
@@ -237,11 +242,6 @@
       "is_array": true,
       "type": "email_t"
     },
-    "finding": {
-      "caption": "Finding",
-      "description": "The finding reported by detection or analytics",
-      "type": "finding"
-    },
     "first_name": {
       "caption": "First Name",
       "description": "The first name of a person.",
@@ -254,16 +254,16 @@
     },
     "impact": {
       "caption": "Impact",
-      "description": "The impact of the finding, valid range 0-100.",
+      "description": "The impact of the detection, valid range 0-100.",
       "type": "integer_t"
     },
     "impact_id": {
       "caption": "Impact ID",
-      "description": "The normalized impact of the finding.",
+      "description": "The normalized impact of the detection.",
       "enum": {
         "-1": {
           "caption": "Other",
-          "description": "The finding impact is not mapped. See the <code>impact</code> attribute, which contains a data source specific value."
+          "description": "The detection impact is not mapped. See the <code>impact</code> attribute, which contains a data source specific value."
         },
         "0": {
           "caption": "Unknown"

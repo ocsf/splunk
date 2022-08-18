@@ -1,56 +1,56 @@
 {
-  "caption": "Finding Report",
+  "caption": "Detection Report",
   "uid": 1,
   "category": "findings",
-  "name": "finding_report",
+  "name": "detection_report",
   "extends": "base_event",
-  "description": "Finding events report the results of detections or analytics.",
+  "description": "Detection events report the results of detections or analytics.",
   "attributes": {
+    "detection": {
+      "group": "primary",
+      "requirement": "required"
+    },
     "detection_end_time": {
-      "requirement": "recommended",
-      "group": "primary"
+      "group": "primary",
+      "requirement": "recommended"
     },
     "detection_start_time": {
-      "requirement": "recommended",
-      "group": "primary"
+      "group": "primary",
+      "requirement": "recommended"
     },
     "device_entities": {
       "group": "primary"
     },
     "disposition": {
-      "requirement": "required",
-      "group": "classification"
+      "group": "classification",
+      "requirement": "required"
     },
     "disposition_id": {
-      "requirement": "required",
-      "group": "classification",
       "enum": {
         "1": {
           "caption": "Logged"
         }
-      }
+      },
+      "group": "classification",
+      "requirement": "required"
     },
     "end_time": {
-      "description": "The time of the most recent event included in the findings report.",
+      "description": "The time of the most recent event included in the detection report.",
       "requirement": "recommended"
     },
-    "finding": {
-      "requirement": "required",
-      "group": "primary"
-    },
     "message": {
-      "description": "The description of the finding report.",
+      "description": "The description of the detection report.",
       "group": "primary"
     },
     "observables": {
-      "description": "The observables associated with the finding report."
+      "description": "The observables associated with the detection report."
     },
     "rule": {
-      "requirement": "required",
-      "group": "primary"
+      "group": "primary",
+      "requirement": "required"
     },
     "start_time": {
-      "description": "The time of the least recent event included in the finding report.",
+      "description": "The time of the least recent event included in the detection report.",
       "requirement": "recommended"
     },
     "user_entities": {
