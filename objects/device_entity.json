@@ -41,7 +41,7 @@
     "org_unit": {
       "requirement": "optional"
     },
-    "owner_name": {
+    "owner": {
       "description": "The user or department associated with the device."
     },
     "priority": {

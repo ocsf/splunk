@@ -37,7 +37,7 @@
       "description": "The name of the org unit to which the network belongs.",
       "requirement": "optional"
     },
-    "owner_name": {
+    "owner": {
       "description": "The user or department associated with the network."
     },
     "priority": {

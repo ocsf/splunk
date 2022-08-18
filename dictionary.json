@@ -215,6 +215,16 @@
       "is_array": true,
       "type": "integer_t"
     },
+    "detection_end_time": {
+      "caption": "Detection Start Time",
+      "description": "The end time of a detection time period.",
+      "type": "timestamp_t"
+    },
+    "detection_start_time": {
+      "caption": "Detection Start Time",
+      "description": "The start time of a detection time period.",
+      "type": "timestamp_t"
+    },
     "device_entities": {
       "caption": "Device Entities",
       "description": "The devices that are identified in reported the events.",

@@ -1,7 +1,7 @@
 {
   "caption": "Finding Report",
-  "uid": 0,
-  "category": "finding",
+  "uid": 1,
+  "category": "findings",
   "name": "finding_report",
   "extends": "base_event",
   "description": "Finding events report the results of detections or analytics.",
@@ -17,11 +17,11 @@
     "device_entities": {
       "group": "primary"
     },
-    "outcome": {
+    "disposition": {
       "requirement": "required",
       "group": "classification"
     },
-    "outcome_id": {
+    "disposition_id": {
       "requirement": "required",
       "group": "classification",
       "enum": {
