@@ -4,8 +4,16 @@
   "category": "findings",
   "name": "detection_report",
   "extends": "base_event",
-  "description": "Detection events report the results of detections or analytics.",
+  "description": "Detection events report the suspicious activities detected by rule-based or analytics engines.",
   "attributes": {
+    "activity_id": {
+      "enum": {
+        "1": {
+          "caption": "New",
+          "description": "New suspicious activity."
+        }
+      }
+    },
     "detection": {
       "group": "primary",
       "requirement": "required"
@@ -20,19 +28,6 @@
     },
     "device_entities": {
       "group": "primary"
-    },
-    "disposition": {
-      "group": "classification",
-      "requirement": "required"
-    },
-    "disposition_id": {
-      "enum": {
-        "1": {
-          "caption": "Logged"
-        }
-      },
-      "group": "classification",
-      "requirement": "required"
     },
     "end_time": {
       "description": "The time of the most recent event included in the detection report.",

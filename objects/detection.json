@@ -1,7 +1,7 @@
 {
   "caption": "Detection",
   "name": "detection",
-  "description": "The detection object describes the results of detections or analytics.",
+  "description": "The detection object describes suspicious activities detected by a rule-based or analytics engine.",
   "attributes": {
     "attacks": {
       "description": "The array of attacks identified by the detections or analytics."
@@ -17,7 +17,7 @@
     },
     "cve_uids": {},
     "desc": {
-      "description": "The description of of detections or analytics that produced the detection."
+      "description": "The description of detections or analytics rule that produced the detection."
     },
     "impact": {},
     "impact_id": {
