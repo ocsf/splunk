@@ -1,8 +1,23 @@
 {
-  "caption": "Splunk Attributes",
-  "description": "The Splunk internal attributes.",
-  "annotations": {
-    "group": "splunk"
+  "caption": "Splunk",
+  "description": "This profile defines the Splunk internal attributes.",
+  "meta": "profile",
+  "name": "internal",
+  "apply_to": {
+    "categories": [
+      "system",
+      {
+        "except": [
+          "authorization"
+        ],
+        "name": "audit"
+      }
+    ],
+    "classes": [
+      "base_event"
+    ],
+    "objects": [
+    ]
   },
   "attributes": {
     "host": {
@@ -29,12 +44,5 @@
     "timestamp": {
       "requirement": "recommended"
     }
-  },
-  "apply-to": {
-    "classes": [
-      {
-        "caption": "event"
-      }
-    ]
   }
 }

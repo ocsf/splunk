@@ -1,0 +1,11 @@
+{
+  "caption": "Splunk Profile",
+  "name": "splunk_profile",
+  "description": "Meta class to include the Splunk profile.",
+  "extends": "base_event",
+  "attributes": {
+    "$include": [
+      "profiles/splunk.json"
+    ]
+  }
+}
