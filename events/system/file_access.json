@@ -1,10 +1,15 @@
 {
+  "caption": "File Access Check",
+  "description": "File Access Check events report when a network share object was checked to see whether client can be granted desired access on a file.",
+  "extends": "system",
+  "name": "file_access_check",
+  "uid": 1,
   "associations": {
-    "origin.device": [
-      "user"
+    "device": [
+      "actor.user"
     ],
-    "user": [
-      "origin.device"
+    "actor.user": [
+      "device"
     ]
   },
   "attributes": {
@@ -32,8 +37,8 @@
         }
       }
     },
-    "actor_process": {
-      "description": "The process that performed the activity on the <code>file</code> object",
+    "actor": {
+      "description": "The actor that performed the activity on the <code>file</code> object",
       "requirement": "optional"
     },
     "file": {
@@ -46,10 +51,5 @@
       "group": "primary",
       "requirement": "required"
     }
-  },
-  "caption": "File Access Check",
-  "description": "File Access Check events report when a network share object was checked to see whether client can be granted desired access on a file.",
-  "extends": "system",
-  "name": "file_access_check",
-  "uid": 1
+  }
 }
