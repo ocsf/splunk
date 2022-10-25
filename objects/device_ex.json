@@ -1,0 +1,21 @@
+{
+  "description": "The extended/enriched device object.",
+  "extends": "device",
+  "caption": "Extended Device",
+  "name": "device_ex",
+  "attributes": {
+    "labels": {
+      "description": "The list of labels attached to the device.",
+      "requirement": "optional"
+    },
+    "nt_hosts": {
+      "requirement": "optional"
+    },
+    "owners": {
+      "requirement": "optional"
+    },
+    "pci_domains": {
+      "requirement": "optional"
+    }
+  }
+}

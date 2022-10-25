@@ -19,6 +19,11 @@
     "desc": {
       "description": "The description of detections or analytics rule that produced the detection."
     },
+    "end_time": {
+      "description": "The end time of a detection time period.",
+      "requirement": "recommended",
+      "type": "timestamp_t"
+    },
     "impact": {},
     "impact_id": {
       "requirement": "recommended"
@@ -38,6 +43,11 @@
     },
     "risk_score": {
       "requirement": "required"
+    },
+    "start_time": {
+      "description": "The start time of a detection time period.",
+      "requirement": "recommended",
+      "type": "timestamp_t"
     },
     "type": {
       "description": "The type of the detection."

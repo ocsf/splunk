@@ -1,10 +1,10 @@
 {
   "caption": "Detection Report",
-  "uid": 1,
   "category": "findings",
-  "name": "detection_report",
-  "extends": "base_event",
   "description": "Detection events report the suspicious activities detected by rule-based or analytics engines.",
+  "extends": "base_event",
+  "name": "detection_report",
+  "uid": 1,
   "attributes": {
     "activity_id": {
       "enum": {
@@ -18,15 +18,7 @@
       "group": "primary",
       "requirement": "required"
     },
-    "detection_end_time": {
-      "group": "primary",
-      "requirement": "recommended"
-    },
-    "detection_start_time": {
-      "group": "primary",
-      "requirement": "recommended"
-    },
-    "device_entities": {
+    "devices": {
       "group": "primary"
     },
     "end_time": {
@@ -48,7 +40,7 @@
       "description": "The time of the least recent event included in the detection report.",
       "requirement": "recommended"
     },
-    "user_entities": {
+    "users": {
       "group": "primary"
     }
   }

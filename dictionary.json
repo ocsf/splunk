@@ -3,12 +3,6 @@
   "description": "The Attribute Dictionary defines schema attributes and includes references to the events and objects in which they are used.",
   "name": "dictionary",
   "attributes": {
-    "accounts": {
-      "caption": "User Accounts",
-      "description": "The user accounts associated with the person.",
-      "is_array": true,
-      "type": "user"
-    },
     "cis20": {
       "caption": "CIS 20 List",
       "description": "The CIS 20 is a list of 20 actions and practices an organization’s security team can take on such that cyber attacks or malware, are minimized and prevented.",
@@ -250,47 +244,32 @@
       "description": "The detection reported by a detection or analytics engine.",
       "type": "detection"
     },
-    "detection_end_time": {
-      "caption": "Detection Start Time",
-      "description": "The end time of a detection time period.",
-      "type": "timestamp_t"
-    },
-    "detection_start_time": {
-      "caption": "Detection Start Time",
-      "description": "The start time of a detection time period.",
-      "type": "timestamp_t"
-    },
-    "device_entities": {
-      "caption": "Device Entities",
+    "devices": {
+      "caption": "Devices",
       "description": "The devices that are identified in reported the events.",
       "is_array": true,
-      "type": "device_entity"
+      "type": "device_ex"
     },
-    "emails": {
-      "caption": "Emails",
-      "description": "A list of emails of the person.",
+    "email_addresses": {
+      "caption": "Email Addresses",
+      "description": "The user's additional email addresses.",
       "is_array": true,
       "type": "email_t"
     },
-    "first_name": {
-      "caption": "First Name",
-      "description": "The first name of a person.",
-      "type": "string_t"
+    "end_date": {
+      "description": "The end date of a user's employment.",
+      "name": "End Date",
+      "type": "timestamp_t"
     },
     "full_name": {
       "caption": "Full Name",
-      "description": "The full name of a user.",
+      "description": "The user's full name.",
       "type": "string_t"
     },
-    "home_dir": {
+    "home_folder": {
       "caption": "Home",
       "description": "The user's home folder.",
       "type": "path_t"
-    },
-    "host": {
-      "caption": "Host",
-      "description": "The originating hostname or IP address of the network device that generated the event.",
-      "type": "string_t"
     },
     "impact": {
       "caption": "Impact",
@@ -325,16 +304,6 @@
         }
       },
       "type": "integer_t"
-    },
-    "index": {
-      "caption": "Index",
-      "description": "The name of the index in which a given event is indexed.",
-      "type": "string_t"
-    },
-    "is_public": {
-      "caption": "Public Network",
-      "description": "The indication of whether the network interface is a public IP address.",
-      "type": "boolean_t"
     },
     "kill_chain_phase": {
       "caption": "Kill Chain Phase",
@@ -383,30 +352,15 @@
       },
       "type": "integer_t"
     },
-    "last_name": {
-      "caption": "Last Name",
-      "description": "The last name of a person.",
-      "type": "string_t"
-    },
-    "linecount": {
-      "caption": "Line Count",
-      "description": "The number of lines an event contains. That is the number of lines an event contains before it is indexed.",
-      "type": "integer_t"
-    },
     "managed_by": {
       "caption": "Managed By",
       "description": "The distinguished name of the user that is assigned to manage this object.",
       "type": "string_t"
     },
-    "names": {
-      "caption": "Names",
-      "description": "The names of the person.",
+    "nicknames": {
+      "description": "The user's nicknames.",
       "is_array": true,
-      "type": "string_t"
-    },
-    "nickname": {
-      "caption": "Nickname",
-      "description": "The nickname of a person.",
+      "name": "Nicknames",
       "type": "string_t"
     },
     "nist": {
@@ -415,15 +369,28 @@
       "is_array": true,
       "type": "string_t"
     },
+    "nt_hosts": {
+      "description": "The network hosts of an endpoint or a device.",
+      "is_array": true,
+      "name": "Network Host List",
+      "type": "string_t"
+    },
+    "owners": {
+      "description": "List of names of the services or user accounts that own the resource.",
+      "is_array": true,
+      "name": "Owners",
+      "type": "string_t"
+    },
+    "pci_domains": {
+      "description": "List of the PCI domains of an endpoint or device.",
+      "is_array": true,
+      "name": "PCI Domains",
+      "type": "string_t"
+    },
     "phones": {
       "caption": "Phones",
       "description": "The list of phone numbers.",
       "is_array": true,
-      "type": "string_t"
-    },
-    "punct": {
-      "caption": "Punctuation Pattern ",
-      "description": "The punctuation pattern that is extracted from an event. The punctuation pattern is unique to types of events.",
       "type": "string_t"
     },
     "shell": {
@@ -431,36 +398,16 @@
       "description": "The user's login shell.",
       "type": "string_t"
     },
-    "source": {
-      "caption": "Event Source",
-      "description": "The name of the file, stream, or other input from which the event originates. For data monitored from files and directories, the value of source is the full path, such as `/archive/server1/var/log/messages.0` or `/var/log/`. The value of source for network-based data sources is the protocol and port, such as UDP:514.",
-      "type": "string_t"
+    "start_date": {
+      "description": "The start date of a user's employment.",
+      "name": "Start Date",
+      "type": "timestamp_t"
     },
-    "sourcetype": {
-      "caption": "Source Type",
-      "description": "The format of the data input from which the event originates, such as `access_combined` or `cisco_syslog`. The source type controls how the Splunk platform formats incoming data. [List of pretrained source types - Splunk Documentation](https://docs.splunk.com/Documentation/Splunk/8.2.3/Data/Listofpretrainedsourcetypes)",
-      "type": "string_t"
-    },
-    "splunk_server": {
-      "caption": "Splunk Server",
-      "description": "The name of the Splunk server containing the event. Useful in a distributed Splunk environment.",
-      "type": "string_t"
-    },
-    "suffix": {
-      "caption": "Suffix",
-      "description": "The suffix of a person. For example: <code>M.D.</code> or <code>Ph.D.</code>.",
-      "type": "string_t"
-    },
-    "timestamp": {
-      "caption": "Event Timestamp",
-      "description": "The event's timestamp, which specifies the time at which the event occurred.",
-      "type": "string_t"
-    },
-    "user_entities": {
-      "caption": "User Entities",
+    "users": {
+      "caption": "Users",
       "description": "The users that are identified in reported the events.",
       "is_array": true,
-      "type": "user_entity"
+      "type": "user_ex"
     }
   }
 }
