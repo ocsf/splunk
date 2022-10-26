@@ -36,7 +36,6 @@
       "requirement": "required"
     },
     "risk_level": {
-      "requirement": "recommended"
     },
     "risk_level_id": {
       "requirement": "required"
