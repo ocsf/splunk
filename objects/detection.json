@@ -1,7 +1,7 @@
 {
   "caption": "Detection",
-  "name": "detection",
   "description": "The detection object describes suspicious activities detected by a rule-based or analytics engine.",
+  "name": "detection",
   "attributes": {
     "attacks": {
       "description": "The array of attacks identified by the detections or analytics."
@@ -13,6 +13,10 @@
     },
     "context": {},
     "context_ids": {
+      "requirement": "required"
+    },
+    "correlation_uid": {
+      "description": "The identifier of the event associated with the detection.",
       "requirement": "required"
     },
     "cve_uids": {},
@@ -31,12 +35,7 @@
     "kill_chain_phase": {},
     "kill_chain_phase_id": {},
     "nist": {},
-    "ref_event_uid": {
-      "description": "The identifier of the event associated with the detection.",
-      "requirement": "required"
-    },
-    "risk_level": {
-    },
+    "risk_level": {},
     "risk_level_id": {
       "requirement": "required"
     },
