@@ -19,7 +19,7 @@
       "description": "The identifier of the event associated with the detection.",
       "requirement": "required"
     },
-    "cve_uids": {},
+    "cves": {},
     "desc": {
       "description": "The description of detections or analytics rule that produced the detection."
     },
