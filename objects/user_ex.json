@@ -2,6 +2,7 @@
   "caption": "Extended User",
   "description": "The extended/enriched user object.",
   "extends": "user",
+  "overwrites": ["user"],
   "name": "user_ex",
   "observable": 0,
   "attributes": {

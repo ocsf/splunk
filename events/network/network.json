@@ -1,0 +1,21 @@
+{
+  "extends": "network_activity",
+  "overwrites": "network_activity",
+  "attributes": {
+    "app_name": null,
+    "count": null,
+    "data": null,
+    "duration": null,
+    "end_time": null,
+    "start_time": null,
+    "enrichments": null,
+    "proxy": null,
+    "raw_data": null,
+    "status": null,
+    "status_code": null,
+    "status_detail": null,
+    "tls": null,
+    "traffic": null,
+    "unmapped": null
+  }
+}
