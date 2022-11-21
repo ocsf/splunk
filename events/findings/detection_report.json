@@ -46,9 +46,6 @@
     "observables": {
       "description": "The observables associated with the detection report."
     },
-    "raw_data": {
-      "group": "context"
-    },
     "rule": {
       "group": "primary",
       "requirement": "required"
