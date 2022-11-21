@@ -2,10 +2,12 @@
   "caption": "Detection Report",
   "category": "findings",
   "description": "Detection events report the suspicious activities detected by rule-based or analytics engines.",
-  "extends": "base_event",
   "name": "detection_report",
   "uid": 1,
   "attributes": {
+    "$include": [
+      "includes/classification.json"
+    ],
     "activity_id": {
       "enum": {
         "1": {
@@ -14,6 +16,15 @@
         }
       }
     },
+    "confidence": {
+      "group": "classification",
+      "requirement": "optional"
+    },
+    "data": {
+      "description": "Additional data that is associated with the event.",
+      "group": "context",
+      "requirement": "optional"
+    },
     "detection": {
       "group": "primary",
       "requirement": "required"
@@ -21,23 +32,41 @@
     "devices": {
       "group": "primary"
     },
-    "end_time": {
-      "description": "The time of the most recent event included in the detection report.",
-      "requirement": "recommended"
+    "enrichments": {
+      "group": "context"
     },
     "message": {
       "description": "The description of the detection report.",
       "group": "primary"
     },
+    "metadata": {
+      "group": "context",
+      "requirement": "required"
+    },
     "observables": {
       "description": "The observables associated with the detection report."
+    },
+    "raw_data": {
+      "group": "context"
     },
     "rule": {
       "group": "primary",
       "requirement": "required"
     },
-    "start_time": {
-      "description": "The time of the least recent event included in the detection report.",
+    "severity": {
+      "group": "classification",
+      "requirement": "optional"
+    },
+    "severity_id": {
+      "group": "classification",
+      "requirement": "required"
+    },
+    "time": {
+      "group": "occurrence",
+      "requirement": "required"
+    },
+    "timezone_offset": {
+      "group": "occurrence",
       "requirement": "recommended"
     },
     "users": {

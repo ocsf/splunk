@@ -64,10 +64,6 @@
         }
       },
       "requirement": "required"
-    },
-    "uid": {
-      "caption": "UID",
-      "description": "The unique identifier of the detection."
     }
   }
 }
