@@ -1,9 +1,6 @@
 {
   "description": "The extended/enriched device object.",
   "extends": "device",
-  "overwrites": ["device", "devices"],
-  "caption": "Extended Device",
-  "name": "device_ex",
   "profiles": [
     "splunk/device_ex"
   ],

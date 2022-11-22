@@ -3,13 +3,6 @@
   "caption": "Extended Device",
   "name": "device_ex",
   "meta": "profile",
-  "apply_to": {
-    "categories": [],
-    "classes": [],
-    "objects": [
-      "device"
-    ]
-  },
   "attributes": {
     "labels": {
       "description": "The list of labels attached to the device.",

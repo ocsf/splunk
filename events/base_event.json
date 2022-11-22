@@ -1,0 +1,11 @@
+{
+  "extends": "base_event",
+  "attributes": {
+    "count": null,
+    "data": null,
+    "duration": null,
+    "end_time": null,
+    "start_time": null,
+    "raw_data": null
+  }
+}

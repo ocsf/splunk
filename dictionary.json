@@ -248,7 +248,7 @@
       "caption": "Devices",
       "description": "The devices that are identified in reported the events.",
       "is_array": true,
-      "type": "device_ex"
+      "type": "device"
     },
     "email_addresses": {
       "caption": "Email Addresses",
