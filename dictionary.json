@@ -407,7 +407,7 @@
       "caption": "Users",
       "description": "The users that are identified in reported the events.",
       "is_array": true,
-      "type": "user_ex"
+      "type": "user"
     }
   }
 }

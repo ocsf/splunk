@@ -1,6 +1,6 @@
 {
-  "description": "The extended/enriched device object attributes.",
   "caption": "Extended Device",
+  "description": "The extended/enriched device object attributes.",
   "name": "device_ex",
   "meta": "profile",
   "attributes": {
