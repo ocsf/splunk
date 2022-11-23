@@ -258,7 +258,7 @@
     },
     "end_date": {
       "description": "The end date of a user's employment.",
-      "name": "End Date",
+      "caption": "End Date",
       "type": "timestamp_t"
     },
     "full_name": {
@@ -360,7 +360,7 @@
     "nicknames": {
       "description": "The user's nicknames.",
       "is_array": true,
-      "name": "Nicknames",
+      "caption": "Nicknames",
       "type": "string_t"
     },
     "nist": {
@@ -372,19 +372,19 @@
     "nt_hosts": {
       "description": "The network hosts of an endpoint or a device.",
       "is_array": true,
-      "name": "Network Host List",
+      "caption": "Network Host List",
       "type": "string_t"
     },
     "owners": {
       "description": "List of names of the services or user accounts that own the resource.",
       "is_array": true,
-      "name": "Owners",
+      "caption": "Owners",
       "type": "string_t"
     },
     "pci_domains": {
       "description": "List of the PCI domains of an endpoint or device.",
       "is_array": true,
-      "name": "PCI Domains",
+      "caption": "PCI Domains",
       "type": "string_t"
     },
     "phones": {
@@ -400,7 +400,7 @@
     },
     "start_date": {
       "description": "The start date of a user's employment.",
-      "name": "Start Date",
+      "caption": "Start Date",
       "type": "timestamp_t"
     },
     "users": {
