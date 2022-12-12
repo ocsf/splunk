@@ -16,35 +16,87 @@
         }
       }
     },
+    "analytic_stories": {
+      "group": "context"
+    },
+    "attacks": {
+      "caption": "MITRE ATT&CK®",
+      "description": "The array of adversary tactics and techniques identified by the detections or analytics.",
+      "group": "context"
+    },
+    "cis_csc": {
+      "group": "context"
+    },
     "confidence": {
-      "group": "classification",
-      "requirement": "optional"
+      "group": "primary"
     },
-    "data": {
-      "description": "Additional data that is associated with the event.",
-      "group": "context",
-      "requirement": "optional"
-    },
-    "detection": {
+    "confidence_id": {
       "group": "primary",
-      "requirement": "required"
+      "requirement": "recommended"
+    },
+    "count": {
+      "group": "occurrence"
+    },
+    "cves": {
+      "group": "context"
+    },
+    "data_sources": {
+      "group": "context",
+      "requirement": "recommended"
     },
     "devices": {
       "group": "primary"
     },
+    "duration": {
+      "description": "The duration of the detection time period in milliseconds.",
+      "group": "occurrence"
+    },
+    "end_time": {
+      "description": "The end time of the detection time period.",
+      "group": "occurrence",
+      "requirement": "recommended"
+    },
     "enrichments": {
+      "group": "context"
+    },
+    "evidence": {
+      "group": "context"
+    },
+    "impact": {
+      "group": "primary"
+    },
+    "impact_id": {
+      "group": "primary",
+      "requirement": "recommended"
+    },
+    "kill_chain": {
       "group": "context"
     },
     "message": {
       "description": "The description of the detection report.",
-      "group": "primary"
+      "group": "context"
     },
     "metadata": {
       "group": "context",
       "requirement": "required"
     },
+    "nist": {
+      "group": "context"
+    },
     "observables": {
-      "description": "The observables associated with the detection report."
+      "description": "The observables associated with the detection report.",
+      "group": "context"
+    },
+    "risk_level": {
+      "group": "primary"
+    },
+    "risk_level_id": {
+      "group": "primary",
+      "requirement": "required"
+    },
+    "risk_score": {
+      "group": "primary",
+      "requirement": "required"
     },
     "rule": {
       "group": "primary",
@@ -58,13 +110,14 @@
       "group": "classification",
       "requirement": "required"
     },
+    "start_time": {
+      "description": "The start time of the detection time period.",
+      "group": "occurrence",
+      "requirement": "recommended"
+    },
     "time": {
       "group": "occurrence",
       "requirement": "required"
-    },
-    "timezone_offset": {
-      "group": "occurrence",
-      "requirement": "recommended"
     },
     "users": {
       "group": "primary"
