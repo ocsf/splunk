@@ -40,6 +40,10 @@
     "cves": {
       "group": "context"
     },
+    "data_sources": {
+      "group": "context",
+      "requirement": "recommended"
+    },
     "devices": {
       "group": "primary"
     },
@@ -50,10 +54,12 @@
     "end_time": {
       "description": "The end time of the detection time period.",
       "group": "occurrence",
-      "requirement": "recommended",
-      "type": "timestamp_t"
+      "requirement": "recommended"
     },
     "enrichments": {
+      "group": "context"
+    },
+    "evidence": {
       "group": "context"
     },
     "impact": {
@@ -107,11 +113,7 @@
     "start_time": {
       "description": "The start time of the detection time period.",
       "group": "occurrence",
-      "requirement": "recommended",
-      "type": "timestamp_t"
-    },
-    "supporting_evidence": {
-      "group": "context"
+      "requirement": "recommended"
     },
     "time": {
       "group": "occurrence",

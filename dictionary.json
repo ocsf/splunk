@@ -39,6 +39,12 @@
       },
       "type": "integer_t"
     },
+    "data_sources": {
+      "description": "The data sources for the detection.",
+      "is_array": true,
+      "caption": "Data Sources",
+      "type": "string_t"
+    },
     "devices": {
       "caption": "Devices",
       "description": "The devices that are identified in reported the events.",
@@ -55,6 +61,11 @@
       "description": "The end date of a user's employment.",
       "caption": "End Date",
       "type": "timestamp_t"
+    },
+    "evidence": {
+      "description": "The data the detection exposes to the analyst.",
+      "caption": "Evidence",
+      "type": "json_t"
     },
     "full_name": {
       "caption": "Full Name",
@@ -203,11 +214,6 @@
       "description": "The start date of a user's employment.",
       "caption": "Start Date",
       "type": "timestamp_t"
-    },
-    "supporting_evidence": {
-      "description": "The data the detection expose to the analyst.",
-      "caption": "Supporting Evidence",
-      "type": "json_t"
     },
     "users": {
       "caption": "Users",
