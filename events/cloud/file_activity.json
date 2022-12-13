@@ -58,6 +58,11 @@
       "description": "The endpoint that performed the activity on the target file.",
       "group": "primary",
       "requirement": "required"
+    },
+    "user": {
+      "description": "The user that performed the activity on the target file.",
+      "group": "primary",
+      "requirement": "required"
     }
   }
 }
