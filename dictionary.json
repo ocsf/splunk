@@ -13,7 +13,7 @@
       "caption": "CIS CSC",
       "description": "The CIS Critical Security Controls is a list of top 20 actions and practices an organization’s security team can take on such that cyber attacks or malware, are minimized and prevented.",
       "is_array": true,
-      "type": "string_t"
+      "type": "cis_control"
     },
     "confidence_id": {
       "caption": "Confidence ID",
@@ -38,6 +38,11 @@
         }
       },
       "type": "integer_t"
+    },
+    "control": {
+      "caption": "Control",
+      "description": "The CIS critical security control.",
+      "type": "string_t"
     },
     "data_sources": {
       "description": "The data sources for the detection.",
