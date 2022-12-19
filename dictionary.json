@@ -45,9 +45,9 @@
       "type": "string_t"
     },
     "data_sources": {
+      "caption": "Data Sources",
       "description": "The data sources for the detection.",
       "is_array": true,
-      "caption": "Data Sources",
       "type": "string_t"
     },
     "devices": {
@@ -63,13 +63,13 @@
       "type": "email_t"
     },
     "end_date": {
-      "description": "The end date of a user's employment.",
       "caption": "End Date",
+      "description": "The end date of a user's employment.",
       "type": "timestamp_t"
     },
     "evidence": {
-      "description": "The data the detection exposes to the analyst.",
       "caption": "Evidence",
+      "description": "The data the detection exposes to the analyst.",
       "type": "json_t"
     },
     "full_name": {
@@ -81,6 +81,12 @@
       "caption": "Home",
       "description": "The user's home folder.",
       "type": "path_t"
+    },
+    "hostnames": {
+      "caption": "Hostname List",
+      "description": "The hostnames of an endpoint or a device.",
+      "is_array": true,
+      "type": "hostname_t"
     },
     "impact": {
       "caption": "Impact",
@@ -116,11 +122,58 @@
       },
       "type": "integer_t"
     },
+    "ips": {
+      "caption": "IP List",
+      "description": "The IP addresses of an endpoint or a device.",
+      "is_array": true,
+      "type": "ip_t"
+    },
     "kill_chain": {
       "caption": "Kill Chain",
       "description": "The <a target='_blank' href='https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html'>Cyber Kill Chain®</a>.",
       "is_array": true,
       "type": "kill_chain"
+    },
+    "macs": {
+      "caption": "MAC List",
+      "description": "The Media Access Control (MAC) addresses of an endpoint or a device.",
+      "is_array": true,
+      "type": "mac_t"
+    },
+    "managed_by": {
+      "caption": "Managed By",
+      "description": "The distinguished name of the user that is assigned to manage this object.",
+      "type": "string_t"
+    },
+    "nicknames": {
+      "caption": "Nicknames",
+      "description": "The user's nicknames.",
+      "is_array": true,
+      "type": "string_t"
+    },
+    "nist": {
+      "caption": "NIST List",
+      "description": "The NIST Cybersecurity Framework recommendations for managing the cybersecurity risk.",
+      "is_array": true,
+      "type": "string_t"
+    },
+    "nt_hosts": {
+      "caption": "Network Host List",
+      "description": "The network hosts of an endpoint or a device.",
+      "is_array": true,
+      "type": "string_t"
+    },
+    "owners": {
+      "caption": "Owners",
+      "description": "List of names of the services or user accounts that own the resource.",
+      "is_array": true,
+      "type": "string_t"
+    },
+    "pci_domains": {
+      "caption": "PCI Domains",
+      "description": "List of the PCI domains of an endpoint or device.",
+      "is_array": true,
+      "type": "string_t"
     },
     "phase": {
       "caption": "Kill Chain Phase",
@@ -169,46 +222,16 @@
       },
       "type": "integer_t"
     },
-    "managed_by": {
-      "caption": "Managed By",
-      "description": "The distinguished name of the user that is assigned to manage this object.",
-      "type": "string_t"
-    },
-    "nicknames": {
-      "description": "The user's nicknames.",
-      "is_array": true,
-      "caption": "Nicknames",
-      "type": "string_t"
-    },
-    "nist": {
-      "caption": "NIST List",
-      "description": "The NIST Cybersecurity Framework recommendations for managing the cybersecurity risk.",
-      "is_array": true,
-      "type": "string_t"
-    },
-    "nt_hosts": {
-      "description": "The network hosts of an endpoint or a device.",
-      "is_array": true,
-      "caption": "Network Host List",
-      "type": "string_t"
-    },
-    "owners": {
-      "description": "List of names of the services or user accounts that own the resource.",
-      "is_array": true,
-      "caption": "Owners",
-      "type": "string_t"
-    },
-    "pci_domains": {
-      "description": "List of the PCI domains of an endpoint or device.",
-      "is_array": true,
-      "caption": "PCI Domains",
-      "type": "string_t"
-    },
     "phones": {
       "caption": "Phones",
       "description": "The list of phone numbers.",
       "is_array": true,
       "type": "string_t"
+    },
+    "public_ip": {
+      "caption": "Public IP",
+      "description": "The public IP address of an endpoint or a device.",
+      "type": "ip_t"
     },
     "shell": {
       "caption": "Shell",
@@ -216,8 +239,8 @@
       "type": "string_t"
     },
     "start_date": {
-      "description": "The start date of a user's employment.",
       "caption": "Start Date",
+      "description": "The start date of a user's employment.",
       "type": "timestamp_t"
     },
     "users": {

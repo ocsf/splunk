@@ -1,11 +1,20 @@
 {
   "caption": "Extended Device",
   "description": "The extended/enriched device object attributes.",
-  "name": "device_ex",
   "meta": "profile",
+  "name": "device_ex",
   "attributes": {
+    "hostnames": {
+      "requirement": "optional"
+    },
+    "ips": {
+      "requirement": "optional"
+    },
     "labels": {
       "description": "The list of labels attached to the device.",
+      "requirement": "optional"
+    },
+    "macs": {
       "requirement": "optional"
     },
     "nt_hosts": {
@@ -15,6 +24,9 @@
       "requirement": "optional"
     },
     "pci_domains": {
+      "requirement": "optional"
+    },
+    "public_ip": {
       "requirement": "optional"
     }
   }
