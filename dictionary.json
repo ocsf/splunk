@@ -9,6 +9,11 @@
       "is_array": true,
       "type": "string_t"
     },
+    "caller": {
+      "caption": "Caller",
+      "description": "The inferred source entity for the event. This attribute is populated via business logic.",
+      "type": "inference"
+    },
     "cis_csc": {
       "caption": "CIS CSC",
       "description": "The CIS Critical Security Controls is a list of top 20 actions and practices an organization’s security team can take on such that cyber attacks or malware, are minimized and prevented.",
@@ -242,6 +247,11 @@
       "caption": "Start Date",
       "description": "The start date of a user's employment.",
       "type": "timestamp_t"
+    },
+    "target": {
+      "caption": "Target",
+      "description": "The inferred destination entity for the event. This attribute is populated via business logic.",
+      "type": "inference"
     },
     "users": {
       "caption": "Users",
