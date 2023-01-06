@@ -1,0 +1,15 @@
+{
+  "caption": "Inference",
+  "description": "A semantic interpretation pertaining to the event. Its values are derived via business logic.",
+  "name": "inference",
+  "attributes": {
+    "device": {
+      "description": "The device pertaining to the inference.",
+      "requirement": "recommended"
+    },
+    "user": {
+      "description": "The user pertaining to the inference.",
+      "requirement": "recommended"
+    }
+  }
+}

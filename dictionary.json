@@ -9,6 +9,11 @@
       "is_array": true,
       "type": "string_t"
     },
+    "caller": {
+      "caption": "Caller",
+      "description": "The point of origin from which the action was directed. Its values are derived via business logic. This usually represents the inferred source entity for a logon.",
+      "type": "inference"
+    },
     "cis_csc": {
       "caption": "CIS CSC",
       "description": "The CIS Critical Security Controls is a list of top 20 actions and practices an organization’s security team can take on such that cyber attacks or malware, are minimized and prevented.",
@@ -242,6 +247,11 @@
       "caption": "Start Date",
       "description": "The start date of a user's employment.",
       "type": "timestamp_t"
+    },
+    "target": {
+      "caption": "Target",
+      "description": "The desired entity towards which the action is directed. Its values are derived via business logic. This usually represents the inferred destination entity for a logon.",
+      "type": "inference"
     },
     "users": {
       "caption": "Users",
