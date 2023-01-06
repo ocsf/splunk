@@ -11,7 +11,7 @@
     },
     "caller": {
       "caption": "Caller",
-      "description": "The inferred source entity for the event. This attribute is derived and populated via business logic.",
+      "description": "The inferred source entity for the event. The value is derived and populated via business logic.",
       "type": "inference"
     },
     "cis_csc": {
@@ -250,7 +250,7 @@
     },
     "target": {
       "caption": "Target",
-      "description": "The inferred destination entity for the event. This attribute is derived and populated via business logic.",
+      "description": "The inferred destination entity for the event. The value is derived and populated via business logic.",
       "type": "inference"
     },
     "users": {
