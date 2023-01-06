@@ -1,6 +1,6 @@
 {
   "caption": "Inference",
-  "description": "A derived logical conclusion pertaining to the event. This object is populated via business logic.",
+  "description": "A semantic interpretation pertaining to the event. Its values are derived via business logic.",
   "name": "inference",
   "attributes": {
     "device": {
