@@ -11,7 +11,7 @@
     },
     "caller": {
       "caption": "Caller",
-      "description": "The inferred source entity for the event. Its values are derived via business logic.",
+      "description": "The point of origin from which the action was directed. Its values are derived via business logic. This usually represents the inferred source entity for a logon.",
       "type": "inference"
     },
     "cis_csc": {
@@ -250,7 +250,7 @@
     },
     "target": {
       "caption": "Target",
-      "description": "The desired entity to which the action is directed. Its values are derived via business logic. This usually represents the inferred destination entity for a logon.",
+      "description": "The desired entity towards which the action is directed. Its values are derived via business logic. This usually represents the inferred destination entity for a logon.",
       "type": "inference"
     },
     "users": {
