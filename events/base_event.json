@@ -5,11 +5,11 @@
   "attributes": {
     "caller": {
       "group": "context",
-      "requirement": "required"
+      "requirement": "optional"
     },
     "target": {
       "group": "context",
-      "requirement": "required"
+      "requirement": "optional"
     }
   }
 }
