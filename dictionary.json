@@ -24,10 +24,6 @@
       "caption": "Confidence ID",
       "description": "The normalized confidence level refers to the accuracy of the rule that created the finding. A rule with a low confidence level means that the detection scope is wide and may create finding reports that may not be malicious in nature.",
       "enum": {
-        "-1": {
-          "caption": "Other",
-          "description": "The confidence is not mapped to the defined enum values. See the <code>confidence</code> attribute, which contains a data source specific value."
-        },
         "0": {
           "caption": "Unknown",
           "description": "No confidence is assigned."
@@ -40,6 +36,10 @@
         },
         "3": {
           "caption": "High"
+        },
+        "99": {
+          "caption": "Other",
+          "description": "The confidence is not mapped to the defined enum values. See the <code>confidence</code> attribute, which contains a data source specific value."
         }
       },
       "type": "integer_t"
@@ -102,10 +102,6 @@
       "caption": "Impact ID",
       "description": "The normalized impact of the detection.",
       "enum": {
-        "-1": {
-          "caption": "Other",
-          "description": "The detection impact is not mapped. See the <code>impact</code> attribute, which contains a data source specific value."
-        },
         "0": {
           "caption": "Unknown"
         },
@@ -123,6 +119,10 @@
         },
         "5": {
           "caption": "Fatal"
+        },
+        "99": {
+          "caption": "Other",
+          "description": "The detection impact is not mapped. See the <code>impact</code> attribute, which contains a data source specific value."
         }
       },
       "type": "integer_t"
@@ -189,9 +189,6 @@
       "caption": "Kill Chain Phase ID",
       "description": "The cyber kill chain phase identifier.",
       "enum": {
-        "-1": {
-          "caption": "Other"
-        },
         "0": {
           "caption": "Unknown",
           "description": "The kill chain phase is unknown."
@@ -223,6 +220,9 @@
         "7": {
           "caption": "Actions on Objectives",
           "description": "With hands-on keyboard access, intruders accomplish the mission’s goal."
+        },
+        "99": {
+          "caption": "Other"
         }
       },
       "type": "integer_t"

@@ -1,9 +1,5 @@
 {
   "enum": {
-    "-1": {
-      "description": "The priority is not normalized.",
-      "caption": "Other"
-    },
     "0": {
       "description": "No priority is assigned.",
       "caption": "Unknown"
@@ -19,6 +15,10 @@
     },
     "4": {
       "caption": "Critical"
+    },
+    "99": {
+      "description": "The priority is not normalized.",
+      "caption": "Other"
     }
   }
 }
