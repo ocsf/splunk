@@ -1,9 +1,9 @@
 {
-  "caption": "Cloud File Activity",
-  "description": "Cloud File Activity events report activities on a cloud file or folder.",
-  "category": "cloud",
+  "caption": "Network File Activity",
+  "description": "Network File Activity events report activities on a cloud file storage service such as Box, MS OneDrive, or Google Drive.",
+  "category": "network",
   "extends": "base_event",
-  "name": "cloud_file_activity",
+  "name": "network_file_activity",
   "uid": 1,
   "attributes": {
     "activity_id": {
