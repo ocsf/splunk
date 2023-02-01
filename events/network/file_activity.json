@@ -55,7 +55,6 @@
       "requirement": "required"
     },
     "session": {
-      "caption": "User Session",
       "description": "The session of the user that performed the activity on the target file.",
       "type": "session"
     },
