@@ -54,6 +54,11 @@
       "group": "primary",
       "requirement": "required"
     },
+    "session": {
+      "caption": "User Session",
+      "description": "The session of the user that performed the activity on the target file.",
+      "type": "session"
+    },
     "src_endpoint": {
       "description": "The endpoint that performed the activity on the target file.",
       "group": "primary",
