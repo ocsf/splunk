@@ -56,7 +56,7 @@
     },
     "session": {
       "description": "The session of the user that performed the activity on the target file.",
-      "type": "session"
+      "group": "primary"
     },
     "src_endpoint": {
       "description": "The endpoint that performed the activity on the target file.",
