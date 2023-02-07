@@ -1,0 +1,16 @@
+{
+  "caption": "Splunk Inferred",
+  "description": "The profile adds the inferred caller and target objects.",
+  "meta": "profile",
+  "name": "inferred",
+  "attributes": {
+    "caller": {
+      "group": "context",
+      "requirement": "optional"
+    },
+    "target": {
+      "group": "context",
+      "requirement": "optional"
+    }
+  }
+}
