@@ -2,23 +2,7 @@
   "caption": "Splunk",
   "description": "This profile defines the Splunk internal attributes.",
   "meta": "profile",
-  "name": "internal",
-  "apply_to": {
-    "categories": [
-      "system",
-      {
-        "except": [
-          "authorization"
-        ],
-        "name": "audit"
-      }
-    ],
-    "classes": [
-      "base_event"
-    ],
-    "objects": [
-    ]
-  },
+  "name": "splunk",
   "attributes": {
     "host": {
       "requirement": "required"
@@ -35,7 +19,7 @@
     "source": {
       "requirement": "required"
     },
-    "sourcetype": {
+    "source_type": {
       "requirement": "required"
     },
     "splunk_server": {

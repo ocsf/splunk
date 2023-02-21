@@ -1,0 +1,13 @@
+
+{
+  "description": "The Splunk extended/enriched metadata object.",
+  "extends": "metadata",
+  "profiles": [
+    "splunk/metadata"
+  ],
+  "attributes": {
+    "$include": [
+      "profiles/metadata.json"
+    ]
+  }
+}

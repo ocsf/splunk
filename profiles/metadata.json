@@ -1,0 +1,14 @@
+{
+  "caption": "Extended Metadata",
+  "description": "The Splunk extended/enriched metadata object attributes.",
+  "meta": "profile",
+  "name": "metadata",
+  "attributes": {
+    "customer_uid": {
+      "requirement": "recommended"
+    },
+    "source_type": {
+      "requirement": "recommended"
+    }
+  }
+}

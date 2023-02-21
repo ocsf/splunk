@@ -243,6 +243,11 @@
       "description": "The user's login shell.",
       "type": "string_t"
     },
+    "source_type": {
+      "caption": "Source Type",
+      "description": "The source type of an event is the format of the data input from which it originates.",
+      "type": "string_t"
+    },
     "start_date": {
       "caption": "Start Date",
       "description": "The start date of a user's employment.",
