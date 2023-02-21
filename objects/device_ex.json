@@ -2,11 +2,41 @@
   "description": "The extended/enriched device object.",
   "extends": "device",
   "profiles": [
-    "splunk/device_ex"
+    "splunk/ba"
   ],
   "attributes": {
-    "$include": [
-      "profiles/device_ex.json"
-    ]
+    "hostnames": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "ips": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "labels": {
+      "profile": "splunk/ba",
+      "description": "The list of labels attached to the device.",
+      "requirement": "optional"
+    },
+    "macs": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "nt_hosts": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "owners": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "pci_domains": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "public_ip": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    }
   }
 }

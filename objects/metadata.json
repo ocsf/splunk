@@ -3,11 +3,16 @@
   "description": "The Splunk extended/enriched metadata object.",
   "extends": "metadata",
   "profiles": [
-    "splunk/metadata"
+    "splunk/ba"
   ],
   "attributes": {
-    "$include": [
-      "profiles/metadata.json"
-    ]
+    "customer_uid": {
+      "profile": "splunk/ba",
+      "requirement": "recommended"
+    },
+    "source_type": {
+      "profile": "splunk/ba",
+      "requirement": "recommended"
+    }
   }
 }

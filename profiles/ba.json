@@ -1,0 +1,8 @@
+{
+  "caption": "Splunk BA",
+  "description": "The Splunk extended attributes used by Behavior Analytics.",
+  "meta": "profile",
+  "name": "ba",
+  "attributes": {
+  }
+}

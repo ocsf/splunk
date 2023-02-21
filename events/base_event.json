@@ -3,11 +3,21 @@
   "description": "The extended base event adds the inferred caller and target objects.",
   "extends": "base_event",
   "profiles": [
-    "splunk/inferred"
+    "splunk/ba"
   ],
   "attributes": {
     "$include": [
-      "profiles/inferred.json"
-    ]
+      "profiles/ba.json"
+    ],
+    "caller": {
+      "group": "context",
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "target": {
+      "group": "context",
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    }
   }
 }

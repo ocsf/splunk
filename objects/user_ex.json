@@ -2,11 +2,59 @@
   "description": "The extended/enriched user object.",
   "extends": "user",
   "profiles": [
-    "splunk/user_ex"
+    "splunk/ba"
   ],
   "attributes": {
-    "$include": [
-      "profiles/user_ex.json"
-    ]
+    "email_addresses": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "end_date": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "full_name": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "home_folder": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "labels": {
+      "description": "The list of labels attached to the user.",
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "location": {
+      "description": "The geographical location of the user's office.",
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "managed_by": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "nicknames": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "phones": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "privileges": {
+      "description": "The user privileges.",
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "shell": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "start_date": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    }
   }
 }
