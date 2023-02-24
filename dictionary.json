@@ -225,7 +225,8 @@
           "caption": "Other"
         }
       },
-      "type": "integer_t"
+      "type": "integer_t",
+      "sibling": "phase"
     },
     "phones": {
       "caption": "Phones",
