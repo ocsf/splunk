@@ -1,0 +1,13 @@
+{
+  "description": "The extended the authentication event to add is_new_logon attribute (which is defined in rc.3).",
+  "extends": "authentication",
+  "profiles": [
+    "splunk/ba"
+  ],
+  "attributes": {
+    "is_new_logon": {
+      "group": "context",
+      "requirement": "optional"
+    }
+  }
+}
