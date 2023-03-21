@@ -133,6 +133,11 @@
       "is_array": true,
       "type": "ip_t"
     },
+    "is_new_logon": {
+      "caption": "New Logon",
+      "description": "Indicates logon is from a device not seen before or a first time account logon.",
+      "type": "boolean_t"
+    },
     "kill_chain": {
       "caption": "Kill Chain",
       "description": "The <a target='_blank' href='https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html'>Cyber Kill Chain®</a>.",
