@@ -49,6 +49,14 @@
         },
         "14": {
           "caption": "Open"
+        },
+        "15": {
+          "caption": "Sync",
+          "description": "Mark a file or folder to sync with a computer."
+        },
+        "16": {
+          "caption": "Unsync",
+          "description": "Mark a file or folder to not sync with a computer."
         }
       }
     },
@@ -63,7 +71,7 @@
       "requirement": "optional"
     },
     "file": {
-      "description": "The file that is the target of the activity.",
+      "description": "The file or folder that is the target of the activity.",
       "group": "primary",
       "requirement": "required"
     },
