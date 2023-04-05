@@ -1,0 +1,12 @@
+{
+  "description": "Extends System Activity class to add the Windows Log profile (which is defined in the rc.3).",
+  "extends": "system",
+  "profiles": [
+    "splunk/winlog"
+  ],
+  "attributes": {
+    "$include": [
+      "profiles/winlog.json"
+    ]
+  }
+}
