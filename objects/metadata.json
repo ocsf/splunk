@@ -3,23 +3,16 @@
   "description": "The Splunk extended/enriched metadata object.",
   "extends": "metadata",
   "profiles": [
-    "splunk/ba",
-    "splunk/winlog"
+    "splunk/ba"
   ],
   "attributes": {
     "log_name": {
-      "description": "The Windows logging subsystem. Ex: Channel=Security (xml) or LogName=Security (multiline)",
-      "profile": "splunk/winlog",
       "requirement": "recommended"
     },
     "log_version": {
-      "description": "The version of the event log template. Ex: Version=1 (xml). Note: Multiline formatted windows events do not record this attribute. For more information, refer to 'Event Versions' in <a target='_blank' href='https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4624'>this page</a>.",
-      "profile": "splunk/winlog",
       "requirement": "optional"
     },
-    "provider": {
-      "description": "The service that logged the Windows event. Ex: Microsoft-Windows-Security-Auditing (xml) or Microsoft Windows security auditing. (multiline).",
-      "profile": "splunk/winlog",
+    "log_provider": {
       "requirement": "required"
     },
     "customer_uid": {

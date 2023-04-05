@@ -2,13 +2,9 @@
   "description": "The extended Authentication class to add is_new_logon attribute and Windows Log profile (which are defined in rc.3).",
   "extends": "authentication",
   "profiles": [
-    "splunk/ba",
-    "splunk/winlog"
+    "splunk/ba"
   ],
   "attributes": {
-    "$include": [
-      "profiles/winlog.json"
-    ],
     "is_new_logon": {
       "group": "context",
       "requirement": "optional"
