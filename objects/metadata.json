@@ -6,6 +6,9 @@
     "splunk/ba"
   ],
   "attributes": {
+    "event_code": {
+      "requirement": "optional"
+    },
     "log_name": {
       "requirement": "recommended"
     },
@@ -13,7 +16,7 @@
       "requirement": "optional"
     },
     "log_provider": {
-      "requirement": "required"
+      "requirement": "recommended"
     },
     "customer_uid": {
       "profile": "splunk/ba",
