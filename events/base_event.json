@@ -8,16 +8,6 @@
   "attributes": {
     "$include": [
       "profiles/ba.json"
-    ],
-    "caller": {
-      "group": "context",
-      "profile": "splunk/ba",
-      "requirement": "optional"
-    },
-    "target": {
-      "group": "context",
-      "profile": "splunk/ba",
-      "requirement": "optional"
-    }
+    ]
   }
 }
