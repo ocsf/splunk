@@ -1,0 +1,14 @@
+{
+  "description": "The Splunk extended/enriched file object.",
+  "extends": "file",
+  "profiles": [
+    "splunk/ba"
+  ],
+  "attributes": {
+    "url": {
+      "description": "The URL where the object resides.",
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    }
+  }
+}
