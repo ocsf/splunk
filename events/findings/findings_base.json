@@ -1,0 +1,8 @@
+{
+  "caption": "Findings",
+  "description": "The Findings event is a generic event that defines a set of attributes available in the Findings events. As a generic event, it could be used to log events that are not otherwise defined by the Findings category.",
+  "extends": "findings",
+  "name": "findings_base",
+  "uid": 0,
+  "attributes": {}
+}
