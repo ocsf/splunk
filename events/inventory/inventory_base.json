@@ -1,0 +1,8 @@
+{
+  "caption": "Inventory",
+  "description": "The Inventory event is a generic event that defines a set of attributes available in the Configuration/Inventory events. As a generic event, it could be used to log events that are not otherwise defined by the Configuration/Inventory category.",
+  "extends": "inventory",
+  "name": "inventory_base",
+  "uid": 0,
+  "attributes": {}
+}

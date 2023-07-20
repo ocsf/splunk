@@ -1,0 +1,8 @@
+{
+  "caption": "Audit Activity",
+  "description": "The Audit Activity event is a generic event that defines a set of attributes available in the Audit Activity events. As a generic event, it could be used to log events that are not otherwise defined by the Audit Activity category.",
+  "extends": "audit",
+  "name": "audit_base",
+  "uid": 0,
+  "attributes": {}
+}
