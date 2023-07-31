@@ -35,11 +35,6 @@
       "group": "primary",
       "requirement": "recommended"
     },
-    "resource": {
-      "description": "Resource that the privileges give access to.",
-      "group": "primary",
-      "requirement": "optional"
-    },
     "user": {
       "description": "A user that was added to or removed from the group.",
       "group": "primary",
