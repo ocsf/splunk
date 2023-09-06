@@ -5,6 +5,30 @@
     "splunk/ba"
   ],
   "attributes": {
+    "activity_id": {
+      "enum": {
+        "1": {
+          "caption": "Logon",
+          "description": "A new logon session was requested."
+        },
+        "2": {
+          "caption": "Logoff",
+          "description": "A logon session was terminated and no longer exists."
+        },
+        "3": {
+          "caption": "Authentication Ticket",
+          "description": "A Kerberos authentication ticket (TGT) was requested."
+        },
+        "4": {
+          "caption": "Service Ticket Request",
+          "description": "A Kerberos service ticket was requested."
+        },
+        "5": {
+          "caption": "Service Ticket Renew",
+          "description": "A Kerberos service ticket was renewed."
+        }
+      }
+    },
     "is_new_logon": {
       "group": "context",
       "requirement": "optional"
