@@ -1,54 +1,68 @@
 {
   "caption": "Network File Activity",
-  "description": "Network File Activity events report activities on a cloud file storage service such as Box, MS OneDrive, or Google Drive.",
+  "description": "Network File Activity events report file activities traversing the network, including file storage services such as Box, MS OneDrive, or Google Drive.",
   "category": "network",
-  "extends": "base_event",
+  "extends": "network_activity",
   "name": "network_file_activity",
   "uid": 10,
   "attributes": {
     "activity_id": {
       "enum": {
         "1": {
-          "caption": "Upload"
+          "caption": "Upload",
+          "description": "Upload a file."
         },
         "2": {
-          "caption": "Download"
+          "caption": "Download",
+          "description": "Download a file."
         },
         "3": {
-          "caption": "Update"
+          "caption": "Update",
+          "description": "Update a file."
         },
         "4": {
-          "caption": "Delete"
+          "caption": "Delete",
+          "description": "Delete a file."
         },
         "5": {
-          "caption": "Rename"
+          "caption": "Rename",
+          "description": "Rename a file."
         },
         "6": {
-          "caption": "Copy"
+          "caption": "Copy",
+          "description": "Copy a file."
         },
         "7": {
-          "caption": "Move"
+          "caption": "Move",
+          "description": "Move a file."
         },
         "8": {
-          "caption": "Restore"
+          "caption": "Restore",
+          "description": "Restore a file."
         },
         "9": {
-          "caption": "Preview"
+          "caption": "Preview",
+          "description": "Preview a file."
         },
         "10": {
-          "caption": "Lock"
+          "caption": "Lock",
+          "description": "Lock a file."
         },
         "11": {
-          "caption": "Unlock"
+          "caption": "Unlock",
+          "description": "Unlock a file."
         },
         "12": {
-          "caption": "Share"
+          "caption": "Share",
+          "description": "Share a file."
         },
         "13": {
-          "caption": "Unshare"
+          "caption": "Unshare",
+          "description": "Unshare a file."
         },
         "14": {
-          "caption": "Open"
+          "caption": "Open",
+          "description": "Open a file."
         },
         "15": {
           "caption": "Sync",
@@ -65,13 +79,20 @@
       "group": "primary",
       "requirement": "required"
     },
+    "connection_info": {
+      "requirement": "optional"
+    },
+    "dst_endpoint": {
+      "description": "The endpoint that received the activity on the target file.",
+      "requirement": "recommended"
+    },
     "expiration_time": {
       "description": "The share expiration time.",
       "group": "context",
       "requirement": "optional"
     },
     "file": {
-      "description": "The file or folder that is the target of the activity.",
+      "description": "The file that is the target of the activity.",
       "group": "primary",
       "requirement": "required"
     },
