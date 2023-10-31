@@ -270,6 +270,11 @@
       "description": "The user's login shell.",
       "type": "string_t"
     },
+    "source": {
+      "caption": "Source",
+      "description": "The <a target='_blank' href='https://docs.splunk.com/Splexicon:Source'>source</a> of an event is the data input from which it originates. In the case of data monitored from files and directories, the source consists of the full pathname of the file or directory. In the case of a network-based source, the source field consists of the protocol and port, such as UDP:514.",
+      "type": "string_t"
+    },
     "source_type": {
       "caption": "Source Type",
       "description": "The source type of an event is the format of the data input from which it originates.",

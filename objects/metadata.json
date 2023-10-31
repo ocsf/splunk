@@ -22,6 +22,10 @@
       "profile": "splunk/ba",
       "requirement": "recommended"
     },
+    "source": {
+      "profile": "splunk/ba",
+      "requirement": "recommended"
+    },
     "source_type": {
       "profile": "splunk/ba",
       "requirement": "recommended"
