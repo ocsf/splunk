@@ -1,0 +1,18 @@
+{
+  "description": "The Splunk extended/enriched file object.",
+  "extends": "group",
+  "profiles": [
+    "splunk/ba"
+  ],
+  "attributes": {
+    "domain": {
+      "description": "The domain where the group is defined. For example: the LDAP or Active Directory domain.",
+      "requirement": "optional"
+    },
+    "url": {
+      "description": "The URL where the object resides.",
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    }
+  }
+}
