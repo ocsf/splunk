@@ -1,0 +1,27 @@
+{
+  "caption": "Authorization",
+  "description": "Authorization events report special privileges or groups assigned to a session.",
+  "extends": "authorization",
+  "attributes": {
+    "activity_id": {
+      "enum": {
+        "1": {
+          "description": "Assign special privileges to a new logon.",
+          "caption": "Assign Privileges"
+        },
+        "2": {
+          "description": "Assign special groups to a new logon.",
+          "caption": "Assign Groups"
+        },
+        "3": {
+          "description": "Start a new session.",
+          "caption": "Start Session"
+        },
+        "4": {
+          "description": "End a session.",
+          "caption": "End Session"
+        }
+      }
+    }
+  }
+}
