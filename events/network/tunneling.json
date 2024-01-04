@@ -1,0 +1,35 @@
+{
+  "caption": "Network Tunneling Activity",
+  "description": "Network Tunneling Activity events report secure tunnel establishment, teardowns, renewals, and other network tunneling specific actions.",
+  "category": "network",
+  "extends": "network_activity",
+  "name": "network_tunneling_activity",
+  "uid": 11,
+  "attributes": {
+    "activity_id": {
+      "enum": {
+        "1": {
+          "caption": "Open",
+          "description": "Open a tunnel."
+        },
+        "2": {
+          "caption": "Close",
+          "description": "Close a tunnel."
+        },
+        "3": {
+          "caption": "Renew",
+          "description": "Renew a tunnel."
+        }
+      }
+    },
+    "dst_endpoint": {
+      "description": "The endpoint that received the activity on the target file.",
+      "requirement": "recommended"
+    },
+    "src_endpoint": {
+      "description": "The endpoint that performed the activity on the target file.",
+      "group": "primary",
+      "requirement": "required"
+    }
+  }
+}
