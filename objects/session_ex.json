@@ -1,0 +1,9 @@
+{
+  "description": "The extended/enriched session object.",
+  "extends": "session",
+  "attributes": {
+    "is_vpn": {
+      "requirement": "optional"
+    }
+  }
+}

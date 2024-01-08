@@ -159,6 +159,11 @@
       "description": "Indicates logon is from a device not seen before or a first time account logon.",
       "type": "boolean_t"
     },
+    "is_vpn": {
+      "caption": "VPN Session",
+      "description": "The indication of whether the session is a VPN session.",
+      "type": "boolean_t"
+    },
     "kill_chain": {
       "caption": "Kill Chain",
       "description": "The <a target='_blank' href='https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html'>Cyber Kill Chain®</a>.",
