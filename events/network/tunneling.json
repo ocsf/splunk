@@ -35,6 +35,12 @@
       "description": "The source endpoint of the tunneling activity.",
       "group": "primary",
       "requirement": "recommended"
+    },
+    "session": {
+      "caption": "Tunnel Session",
+      "description": "The session associated with the tunneling activity.",
+      "group": "primary",
+      "requirement": "recommended"
     }
   }
 }
