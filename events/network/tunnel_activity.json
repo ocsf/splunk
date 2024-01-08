@@ -1,9 +1,9 @@
 {
-  "caption": "Network Tunneling Activity",
-  "description": "Network Tunneling Activity events report secure tunnel establishment, teardowns, renewals, and other network tunneling specific actions.",
+  "caption": "Network Tunnel Activity",
+  "description": "Network Tunnel Activity events report secure tunnel establishment, teardowns, renewals, and other network tunnel specific actions.",
   "category": "network",
   "extends": "base_event",
-  "name": "network_tunneling_activity",
+  "name": "network_tunnel_activity",
   "uid": 11,
   "attributes": {
     "activity_id": {
@@ -28,17 +28,17 @@
       "requirement": "optional"
     },
     "dst_endpoint": {
-      "description": "The destination endpoint of the tunneling activity.",
+      "description": "The destination endpoint of the tunnel activity.",
       "requirement": "recommended"
     },
     "src_endpoint": {
-      "description": "The source endpoint of the tunneling activity.",
+      "description": "The source endpoint of the tunnel activity.",
       "group": "primary",
       "requirement": "recommended"
     },
     "session": {
       "caption": "Tunnel Session",
-      "description": "The session associated with the tunneling activity.",
+      "description": "The session associated with the tunnel activity.",
       "group": "primary",
       "requirement": "recommended"
     }
