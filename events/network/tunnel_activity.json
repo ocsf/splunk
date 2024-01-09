@@ -25,10 +25,12 @@
     },
     "connection_info": {
       "description": "The tunnel connection information.",
+      "group": "primary",
       "requirement": "optional"
     },
     "dst_endpoint": {
       "description": "The destination endpoint of the tunnel activity.",
+      "group": "primary",
       "requirement": "recommended"
     },
     "src_endpoint": {
