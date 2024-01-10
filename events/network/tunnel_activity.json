@@ -43,6 +43,11 @@
       "description": "The session associated with the tunnel activity.",
       "group": "primary",
       "requirement": "recommended"
+    },
+    "user": {
+      "description": "The user associated with the tunnel activity.",
+      "group": "primary",
+      "requirement": "recommended"
     }
   }
 }
