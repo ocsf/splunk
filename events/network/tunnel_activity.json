@@ -28,6 +28,10 @@
       "group": "primary",
       "requirement": "optional"
     },
+    "device": {
+      "group": "primary",
+      "requirement": "recommended"
+    },
     "dst_endpoint": {
       "description": "The destination endpoint of the tunnel activity.",
       "group": "primary",
