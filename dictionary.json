@@ -302,7 +302,7 @@
     },
     "tunnel_interface": {
       "caption": "Tunnel Interface",
-      "description": "The tunnel interface. See specific usage.",
+      "description": "The interface of a tunnel. In a tunnelled session, this is the virtual interface. Ex: <code>utun1</code>.",
       "type": "network_interface"
     },
     "users": {
