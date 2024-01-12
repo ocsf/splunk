@@ -1,0 +1,30 @@
+{
+  "description": "The extended/enriched network_interface object.",
+  "extends": "network_interface",
+  "attributes": {
+    "type_id": {
+      "description": "The network interface type identifier.",
+      "enum": {
+        "0": {
+          "caption": "Unknown"
+        },
+        "1": {
+          "caption": "Wired"
+        },
+        "2": {
+          "caption": "Wireless"
+        },
+        "3": {
+          "caption": "Mobile"
+        },
+        "4": {
+          "caption": "Tunnel"
+        },
+        "99": {
+          "caption": "Other"
+        }
+      },
+      "requirement": "required"
+    }
+  }
+}

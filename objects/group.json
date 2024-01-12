@@ -1,5 +1,5 @@
 {
-  "description": "The Splunk extended/enriched file object.",
+  "description": "The Splunk extended/enriched group object.",
   "extends": "group",
   "profiles": [
     "splunk/ba"
