@@ -23,6 +23,11 @@
       },
       "requirement": "required"
     },
+    "client_interface": {
+      "description": "The client interface of the tunnel. In a tunnelled session, this is the interface of the client which requested the tunnel. Ex: <code>en0</code>.",
+      "group": "primary",
+      "requirement": "recommended"
+    },
     "connection_info": {
       "description": "The tunnel connection information.",
       "group": "primary",
@@ -45,6 +50,11 @@
     "session": {
       "caption": "Tunnel Session",
       "description": "The session associated with the tunnel activity.",
+      "group": "primary",
+      "requirement": "recommended"
+    },
+    "tunnel_interface": {
+      "description": "The interface of the tunnel. In a tunnelled session, this is the virtual interface. Ex: <code>utun1</code>.",
       "group": "primary",
       "requirement": "recommended"
     },

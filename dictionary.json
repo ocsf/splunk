@@ -3,6 +3,11 @@
   "description": "The Attribute Dictionary defines schema attributes and includes references to the events and objects in which they are used.",
   "name": "dictionary",
   "attributes": {
+    "client_interface": {
+      "caption": "Client Interface",
+      "description": "The client interface. See specific usage.",
+      "type": "network_interface"
+    },
     "event_code": {
       "caption": "Event Code",
       "description": "The Event ID or Code that the product uses to describe the event.",
@@ -294,6 +299,11 @@
       "caption": "Target",
       "description": "The desired entity towards which the action is directed. Its values are derived via business logic. This usually represents the inferred destination entity for a logon.",
       "type": "inference"
+    },
+    "tunnel_interface": {
+      "caption": "Tunnel Interface",
+      "description": "The tunnel interface. See specific usage.",
+      "type": "network_interface"
     },
     "users": {
       "caption": "Users",
