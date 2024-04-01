@@ -68,5 +68,13 @@
       "group": "primary",
       "requirement": "recommended"
     }
+  },
+  "associations": {
+    "user": [
+      "tunnel_interface"
+    ],
+    "tunnel_interface": [
+      "user"
+    ]
   }
 }

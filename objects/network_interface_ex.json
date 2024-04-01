@@ -1,6 +1,7 @@
 {
   "description": "The extended/enriched network_interface object.",
   "extends": "network_interface",
+  "observable": 100000,
   "attributes": {
     "type_id": {
       "description": "The network interface type identifier.",
