@@ -8,10 +8,30 @@
       "description": "The client interface. See specific usage.",
       "type": "network_interface"
     },
+    "coordinates": {
+      "@deprecated": {
+        "message": "Use specific <code> lat, long </code> attributes instead.",
+        "since": "1.2.0"
+      },
+      "caption": "Coordinates",
+      "description": "A two-element array, containing a longitude/latitude pair. The format conforms with <a target='_blank' href='https://geojson.org'>GeoJSON</a>. For example: <code>[-73.983, 40.719]</code>.",
+      "is_array": true,
+      "type": "float_t"
+    },
     "event_code": {
       "caption": "Event Code",
       "description": "The Event ID or Code that the product uses to describe the event.",
       "type": "string_t"
+    },
+    "geohash": {
+      "caption": "Geohash",
+      "description": "<p>Geohash of the geo-coordinates (latitude and longitude).</p><a target='_blank' href='https://en.wikipedia.org/wiki/Geohash'>Geohashing</a> is a geocoding system used to encode geographic coordinates in decimal degrees, to a single string.",
+      "type": "string_t"
+    },
+    "lat": {
+      "caption": "Latitude",
+      "description": "The geographical Latitude coordinate represented in Decimal Degrees (DD). For example: <code>42.361145</code>.",
+      "type": "float_t"
     },
     "log_level": {
       "caption": "Log Level",
@@ -38,6 +58,11 @@
       "description": "An array of Logger objects that describe the devices and logging products between the event source and its eventual destination. Note, this attribute can be used when there is a complex end-to-end path of event flow.",
       "is_array": true,
       "type": "logger"
+    },
+    "long": {
+      "caption": "Longitude",
+      "description": "The geographical Longitude coordinate represented in Decimal Degrees (DD). For example: <code>-71.057083</code>.",
+      "type": "float_t"
     },
     "analytic_stories": {
       "caption": "Analytic Stories",
