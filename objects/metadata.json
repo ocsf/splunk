@@ -9,6 +9,11 @@
     "event_code": {
       "requirement": "optional"
     },
+    "log_level": {
+      "caption": "Log Level",
+      "description": "The audit level at which an event was generated.",
+      "type": "string_t"
+    },
     "log_name": {
       "requirement": "recommended"
     },
@@ -18,6 +23,7 @@
     "log_provider": {
       "requirement": "recommended"
     },
+    "loggers": {},
     "customer_uid": {
       "profile": "splunk/ba",
       "requirement": "recommended"

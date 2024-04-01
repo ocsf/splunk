@@ -13,22 +13,32 @@
       "description": "The Event ID or Code that the product uses to describe the event.",
       "type": "string_t"
     },
+    "log_level": {
+      "caption": "Log Level",
+      "description": "The audit level at which an event was generated.",
+      "type": "string_t"
+    },
     "log_name": {
       "caption": "Log Name",
-      "description": "The logging subsystem the product uses for the event. For example, Windows logging subsystem: Channel=Security (xml) or LogName=Security (multiline).",
+      "description": "The event log name. For example, syslog file name or Windows logging subsystem: Security.",
       "type": "string_t"
     },
     "log_provider": {
       "caption": "Log Provider",
-      "description": "The service that logged the event. For example: Microsoft-Windows-Security-Auditing (xml) or Microsoft Windows security auditing (multiline).",
+      "description": "The logging provider or logging service that logged the event. For example, Microsoft-Windows-Security-Auditing.",
       "type": "string_t"
     },
     "log_version": {
       "caption": "Log Version",
-      "description": "The version of the event log template, which the product uses for the event.",
+      "description": "The event log schema version that specifies the format of the original event. For example syslog version or Cisco Log Schema Version.",
       "type": "string_t"
     },
-
+    "loggers": {
+      "caption": "Loggers",
+      "description": "An array of Logger objects that describe the devices and logging products between the event source and its eventual destination. Note, this attribute can be used when there is a complex end-to-end path of event flow.",
+      "is_array": true,
+      "type": "logger"
+    },
     "analytic_stories": {
       "caption": "Analytic Stories",
       "description": "The analytic stories associated with the detection.",
@@ -299,6 +309,11 @@
       "caption": "Target",
       "description": "The desired entity towards which the action is directed. Its values are derived via business logic. This usually represents the inferred destination entity for a logon.",
       "type": "inference"
+    },
+    "transmit_time": {
+      "caption": "Transmission Time",
+      "description": "The event transmission time from one device to another.  See specific usage",
+      "type": "timestamp_t"
     },
     "tunnel_interface": {
       "caption": "Tunnel Interface",
