@@ -1,0 +1,13 @@
+{
+  "description": "The extended/enriched network_endpoint object.",
+  "extends": "network_endpoint",
+  "profiles": [
+    "splunk/ba"
+  ],
+  "attributes": {
+    "os": {
+      "description": "The endpoint operating system.",
+      "requirement": "optional"
+    }
+  }
+}
