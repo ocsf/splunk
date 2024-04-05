@@ -68,5 +68,13 @@
       "group": "primary",
       "requirement": "recommended"
     }
+  },
+  "associations": {
+    "user": [
+      "client_interface"
+    ],
+    "client_interface": [
+      "user"
+    ]
   }
 }
