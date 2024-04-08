@@ -1,9 +1,9 @@
 {
-  "caption": "Network Tunnel Activity",
-  "description": "Network Tunnel Activity events report secure tunnel establishment, teardowns, renewals, and other network tunnel specific actions.",
+  "caption": "Tunnel Activity",
+  "description": "Tunnel Activity events report secure tunnel establishment, teardowns, renewals, and other network tunnel specific actions.",
   "category": "network",
   "extends": "base_event",
-  "name": "network_tunnel_activity",
+  "name": "tunnel_activity",
   "uid": 11,
   "attributes": {
     "activity_id": {
