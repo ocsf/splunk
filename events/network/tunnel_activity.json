@@ -66,5 +66,13 @@
     "client_interface": [
       "user"
     ]
-  }
+  },
+	"constraints": {
+		"at_least_one": [
+			"client_interface",
+			"tunnel_interface",
+			"connection_info",
+      "session"
+		]
+	}
 }
