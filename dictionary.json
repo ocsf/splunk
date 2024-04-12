@@ -308,6 +308,7 @@
     "protocol_id": {
       "caption": "Protocol ID",
       "description": "The normalized networking protocol ID. See specific usage.",
+      "sibling": "protocol_name",
       "type": "integer_t"
     },
     "public_ip": {
@@ -358,6 +359,7 @@
     "tunnel_type_id": {
       "caption": "Type",
       "description": "The normalized tunnel type ID.",
+      "sibling": "tunnel_type",
       "type": "integer_t"
     },
     "users": {
