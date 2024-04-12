@@ -305,12 +305,6 @@
       "is_array": true,
       "type": "string_t"
     },
-    "protocol_id": {
-      "caption": "Protocol ID",
-      "description": "The normalized networking protocol ID. See specific usage.",
-      "sibling": "protocol_name",
-      "type": "integer_t"
-    },
     "public_ip": {
       "caption": "Public IP",
       "description": "The public IP address of an endpoint or a device.",
