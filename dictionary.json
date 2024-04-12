@@ -305,6 +305,11 @@
       "is_array": true,
       "type": "string_t"
     },
+    "protocol_id": {
+      "caption": "Protocol ID",
+      "description": "The normalized networking protocol ID. See specific usage.",
+      "type": "integer_t"
+    },
     "public_ip": {
       "caption": "Public IP",
       "description": "The public IP address of an endpoint or a device.",
@@ -344,6 +349,16 @@
       "caption": "Tunnel Interface",
       "description": "The interface of a tunnel. In a tunnelled session, this is the virtual interface. Ex: <code>utun1</code>. The IP is usually a private (local rfc-1918) IP.",
       "type": "network_interface"
+    },
+    "tunnel_type": {
+      "caption": "Type",
+      "description": "The tunnel type. See specific usage.",
+      "type": "string_t"
+    },
+    "tunnel_type_id": {
+      "caption": "Type",
+      "description": "The normalized tunnel type ID.",
+      "type": "integer_t"
     },
     "users": {
       "caption": "Users",
