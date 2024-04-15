@@ -46,6 +46,19 @@
       "group": "primary",
       "requirement": "required"
     },
+    "share": {
+      "description": "The share name.",
+      "group": "primary",
+      "requirement": "recommended"
+    },
+    "share_type": {
+      "group": "primary",
+      "requirement": "recommended"
+    },
+    "share_type_id": {
+      "group": "primary",
+      "requirement": "recommended"
+    },
     "src_endpoint": {
       "description": "The Endpoint from which the file access was requested.",
       "group": "primary",

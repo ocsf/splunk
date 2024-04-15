@@ -310,6 +310,41 @@
       "description": "The public IP address of an endpoint or a device.",
       "type": "ip_t"
     },
+    "share": {
+      "caption": "Share",
+      "description": "The share name. See specific usage.",
+      "type": "string_t"
+    },
+    "share_type": {
+      "caption": "Share Type",
+      "description": "The share type, normalized to the caption of the share_type_id value. In the case of 'Other', it is defined by the event source.",
+      "type": "string_t"
+    },
+    "share_type_id": {
+      "caption": "Share Type Id",
+      "description": "The normalized identifier of the share type.",
+      "enum": {
+        "99": {
+          "caption": "Other",
+          "description": "The share type is not mapped. See the <code>share_type</code> attribute, which contains a data source specific value."
+        },
+        "0": {
+          "caption": "Unknown",
+          "description": "The share type is unknown."
+        },
+        "1": {
+          "caption": "File"
+        },
+        "2": {
+          "caption": "Pipe"
+        },
+        "3": {
+          "caption": "Print"
+        }
+      },
+      "sibling": "share_type",
+      "type": "integer_t"
+    },
     "shell": {
       "caption": "Shell",
       "description": "The user's login shell.",
