@@ -1,0 +1,14 @@
+{
+  "description": "The extended Entity Management class.",
+  "extends": "entity_management",
+  "profiles": [
+    "splunk/ba"
+  ],
+  "attributes": {
+    "src_endpoint": {
+      "description": "Details about the source of the IAM activity.",
+      "group": "primary",
+      "requirement": "recommended"
+    }
+  }
+}
