@@ -8,6 +8,11 @@
       "description": "The client interface. See specific usage.",
       "type": "network_interface"
     },
+    "confidence_score": {
+      "caption": "Confidence Score",
+      "description": "The confidence score as reported by the event source.",
+      "type": "integer_t"
+    },
     "coordinates": {
       "@deprecated": {
         "message": "Use specific <code> lat, long </code> attributes instead.",
@@ -22,6 +27,17 @@
       "caption": "Event Code",
       "description": "The Event ID or Code that the product uses to describe the event.",
       "type": "string_t"
+    },
+    "evidences": {
+      "caption": "Evidence Artifacts",
+      "description": "Describes various evidence artifacts associated to the activity/activities that triggered a security detection.",
+      "type": "evidences",
+      "is_array": true
+    },
+    "finding_info": {
+      "caption": "Finding Information",
+      "description": "Describes the supporting information about a generated finding.",
+      "type": "finding_info"
     },
     "geohash": {
       "caption": "Geohash",
@@ -217,6 +233,11 @@
       },
       "type": "integer_t"
     },
+    "impact_score": {
+      "caption": "Impact",
+      "description": "The impact of the finding, valid range 0-100.",
+      "type": "integer_t"
+    },
     "ips": {
       "caption": "IP List",
       "description": "The IP addresses of an endpoint or a device.",
@@ -338,6 +359,11 @@
       "caption": "Public IP",
       "description": "The public IP address of an endpoint or a device.",
       "type": "ip_t"
+    },
+    "risk_details": {
+      "caption": "Risk Details",
+      "description": "Describes the risk associated with the finding.",
+      "type": "string_t"
     },
     "share": {
       "caption": "Share",
