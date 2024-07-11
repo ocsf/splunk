@@ -89,6 +89,11 @@
       "description": "The data bucket object is a basic container that holds data, typically organized through the use of data partitions.",
       "type": "databucket"
     },
+    "data_classification": {
+      "caption": "Data Classification",
+      "description": "The Data Classification object includes information about data classification levels and data category types.",
+      "type": "data_classification"
+    },
     "data_sources": {
       "caption": "Data Sources",
       "description": "The data sources for the detection.",
@@ -313,6 +318,16 @@
       "caption": "Organization",
       "description": "Organization and org unit relevant to the event or object.",
       "type": "organization"
+    },
+    "ou_name": {
+      "caption": "Org Unit Name",
+      "description": "The name of the organizational unit, within an organization.  For example, Finance, IT, R&D",
+      "type": "string_t"
+    },
+    "ou_uid": {
+      "caption": "Org Unit ID",
+      "description": "The alternate identifier for an entity's unique identifier. For example, its Active Directory OU DN or AWS OU ID.",
+      "type": "string_t"
     },
     "owners": {
       "caption": "Owners",
