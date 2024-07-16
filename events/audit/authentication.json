@@ -33,6 +33,11 @@
         }
       }
     },
+    "dst_endpoint": {
+      "description": "The endpoint to which the authentication was targeted.",
+      "group": "primary",
+      "requirement": "recommended"
+    },
     "is_new_logon": {
       "group": "context",
       "requirement": "optional"
