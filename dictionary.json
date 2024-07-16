@@ -14,6 +14,11 @@
       "is_array": true,
       "type": "string_t"
     },
+    "autonomous_system": {
+      "caption": "Autonomous System",
+      "description": "The Autonomous System details associated with an IP address.",
+      "type": "autonomous_system"
+    },
     "caller": {
       "caption": "Caller",
       "description": "The point of origin from which the action was directed. Its values are derived via business logic. This usually represents the inferred source entity for a logon.",
@@ -313,6 +318,11 @@
       "description": "The network hosts of an endpoint or a device.",
       "is_array": true,
       "type": "string_t"
+    },
+    "number": {
+      "caption": "Number",
+      "description": "The number of the entity. See specific usage.",
+      "type": "integer_t"
     },
     "org": {
       "caption": "Organization",

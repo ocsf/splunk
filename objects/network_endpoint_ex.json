@@ -5,6 +5,9 @@
     "splunk/ba"
   ],
   "attributes": {
+    "autonomous_system": {
+      "requirement": "optional"
+    },
     "os": {
       "description": "The endpoint operating system.",
       "requirement": "optional"
