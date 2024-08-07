@@ -278,6 +278,11 @@
       "is_array": true,
       "type": "ip_t"
     },
+    "is_hotp": {
+      "caption": "HMAC-based One-time Password (HOTP)",
+      "description": "Whether the authentication factor is an HMAC-based One-time Password (HOTP).",
+      "type": "boolean_t"
+    },
     "is_new_logon": {
       "caption": "New Logon",
       "description": "Indicates logon is from a device not seen before or a first time account logon.",
@@ -286,6 +291,11 @@
     "is_vpn": {
       "caption": "VPN Session",
       "description": "The indication of whether the session is a VPN session.",
+      "type": "boolean_t"
+    },
+    "is_totp": {
+      "caption": "Time-based One-time Password (TOTP)",
+      "description": "Whether the authentication factor is a Time-based One-time Password (TOTP).",
       "type": "boolean_t"
     },
     "kill_chain": {
@@ -489,6 +499,12 @@
       "caption": "Risk Details",
       "description": "Describes the risk associated with the finding.",
       "type": "string_t"
+    },
+    "security_questions": {
+      "caption": "Security Questions",
+      "description": "The question(s) provided to user for a question-based authentication factor.",
+      "type": "string_t",
+      "is_array": true
     },
     "share": {
       "caption": "Share",
