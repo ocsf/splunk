@@ -478,6 +478,11 @@
       "type": "integer_t",
       "sibling": "phase"
     },
+    "phone_number": {
+      "caption": "Phone Number",
+      "description": "The number associated with the phone.",
+      "type": "string_t"
+    },
     "phones": {
       "caption": "Phones",
       "description": "The list of phone numbers.",
