@@ -19,6 +19,12 @@
       "description": "The Autonomous System details associated with an IP address.",
       "type": "autonomous_system"
     },
+    "auth_factors": {
+      "caption": "Authentication Factors",
+      "description": "Describes a category of methods used for identity verification in an authentication attempt.",
+      "type": "auth_factor",
+      "is_array": true
+    },
     "caller": {
       "caption": "Caller",
       "description": "The point of origin from which the action was directed. Its values are derived via business logic. This usually represents the inferred source entity for a logon.",
@@ -138,6 +144,69 @@
       "type": "evidences",
       "is_array": true
     },
+    "factor_type": {
+      "caption": "Factor Type",
+      "description": "The type of authentication factor used in an authentication attempt.",
+      "type": "string_t"
+    },
+    "factor_type_id": {
+      "caption": "Factor Type ID",
+      "description": "The normalized identifier for the authentication factor.",
+      "sibling": "factor_type",
+      "type": "integer_t",
+      "enum": {
+        "0": {
+          "caption": "Unknown"
+        },
+        "1": {
+          "caption": "SMS",
+          "description": "User receives and inputs a code sent to their mobile device via SMS text message."
+        },
+        "2": {
+          "caption": "Security Question",
+          "description": "The user responds to a security question as part of a question-based authentication factor"
+        },
+        "3": {
+          "caption": "Phone Call",
+          "description": "System calls the user's registered phone number and requires the user to answer and provide a response."
+        },
+        "4": {
+          "caption": "Biometric",
+          "description": "Devices that verify identity-based on user's physical identifiers, such as fingerprint scanners or retina scanners."
+        },
+        "5": {
+          "caption": "Push Notification",
+          "description": "Push notification is sent to user's registered device and requires the user to acknowledge."
+        },
+        "6": {
+          "caption": "Hardware Token",
+          "description": "Physical device that generates a code to be used for authentication."
+        },
+        "7": {
+          "caption": "OTP",
+          "description": "Application generates a one-time password (OTP) for use in authentication."
+        },
+        "8": {
+          "caption": "Email",
+          "description": "A code or link is sent to a user's registered email address."
+        },
+        "9": {
+          "caption": "U2F",
+          "description": "Typically involves a hardware token, which the user physically interacts with to authenticate."
+        },
+        "10": {
+          "caption": "WebAuthn",
+          "description": "Web-based API that enables users to register devices as authentication factors."
+        },
+        "11": {
+          "caption": "Password",
+          "description": "The user enters a password that they have previously established."
+        },
+        "99": {
+          "caption": "Other"
+        }
+      }
+    },
     "finding_info": {
       "caption": "Finding Information",
       "description": "Describes the supporting information about a generated finding.",
@@ -209,6 +278,11 @@
       "is_array": true,
       "type": "ip_t"
     },
+    "is_hotp": {
+      "caption": "HMAC-based One-time Password (HOTP)",
+      "description": "Whether the authentication factor is an HMAC-based One-time Password (HOTP).",
+      "type": "boolean_t"
+    },
     "is_new_logon": {
       "caption": "New Logon",
       "description": "Indicates logon is from a device not seen before or a first time account logon.",
@@ -217,6 +291,11 @@
     "is_vpn": {
       "caption": "VPN Session",
       "description": "The indication of whether the session is a VPN session.",
+      "type": "boolean_t"
+    },
+    "is_totp": {
+      "caption": "Time-based One-time Password (TOTP)",
+      "description": "Whether the authentication factor is a Time-based One-time Password (TOTP).",
       "type": "boolean_t"
     },
     "kill_chain": {
@@ -399,6 +478,11 @@
       "type": "integer_t",
       "sibling": "phase"
     },
+    "phone_number": {
+      "caption": "Phone Number",
+      "description": "The number associated with the phone.",
+      "type": "string_t"
+    },
     "phones": {
       "caption": "Phones",
       "description": "The list of phone numbers.",
@@ -420,6 +504,12 @@
       "caption": "Risk Details",
       "description": "Describes the risk associated with the finding.",
       "type": "string_t"
+    },
+    "security_questions": {
+      "caption": "Security Questions",
+      "description": "The question(s) provided to user for a question-based authentication factor.",
+      "type": "string_t",
+      "is_array": true
     },
     "share": {
       "caption": "Share",
