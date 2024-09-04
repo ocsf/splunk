@@ -598,5 +598,24 @@
       "is_array": true,
       "type": "user"
     }
+  },
+  "types": {
+    "attributes": {
+      "bytestring_t": {
+        "type": "string_t"
+      },
+      "file_hash_t": {
+        "type": "string_t"
+      },
+      "resource_uid_t": {
+        "type": "string_t"
+      },
+      "subnet_t": {
+        "type": "string_t"
+      },
+      "uuid_t": {
+        "type": "string_t"
+      }
+    }
   }
 }
