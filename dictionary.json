@@ -35,6 +35,12 @@
       "description": "The object category. See specific usage.",
       "type": "string_t"
     },
+    "category_id": {
+      "caption": "Category ID",
+      "description": "The normalized identifier of the object category. See specific usage.",
+      "sibling": "category",
+      "type": "integer_t"
+    },
     "client_interface": {
       "caption": "Client Interface",
       "description": "The client interface. See specific usage.",
