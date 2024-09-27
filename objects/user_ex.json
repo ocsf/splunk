@@ -17,6 +17,9 @@
       "profile": "splunk/ba",
       "requirement": "optional"
     },
+    "forward_addr": {
+      "requirement": "optional"
+    },
     "full_name": {
       "profile": "splunk/ba",
       "requirement": "optional"
