@@ -3,6 +3,11 @@
   "description": "The Attribute Dictionary defines schema attributes and includes references to the events and objects in which they are used.",
   "name": "dictionary",
   "attributes": {
+    "account": {
+      "caption": "Account",
+      "description": "The account object describes details about the account that was the source or target of the activity.",
+      "type": "account"
+    },
     "analytic": {
       "caption": "Analytic",
       "description": "The analytic technique used to analyze and derive insights from the data or information that led to the finding or conclusion.",
@@ -217,6 +222,11 @@
       "caption": "Finding Information",
       "description": "Describes the supporting information about a generated finding.",
       "type": "finding_info"
+    },
+    "forward_addr": {
+      "caption": "Forwarding Address",
+      "description": "The user's forwarding email address.",
+      "type": "email_t"
     },
     "full_name": {
       "caption": "Full Name",
