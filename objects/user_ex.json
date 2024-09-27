@@ -5,12 +5,19 @@
     "splunk/ba"
   ],
   "attributes": {
+    "account": {
+      "description": "The user's account or the account associated with the user.",
+      "requirement": "optional"
+    },
     "email_addresses": {
       "profile": "splunk/ba",
       "requirement": "optional"
     },
     "end_date": {
       "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "forward_addr": {
       "requirement": "optional"
     },
     "full_name": {
