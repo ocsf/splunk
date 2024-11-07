@@ -582,6 +582,12 @@
       "description": "The start date of a user's employment.",
       "type": "timestamp_t"
     },
+    "tags": {
+      "caption": "Tags",
+      "description": "The list of tags; <code>{key:value}</code> pairs attached to an entity. A Tag may be used to categorize, filter, and search for entities. For e.g. <code>\"Environment\": \"Production\"</code>, <code>\"Owner\": \"007\"</code>. See specific usage.",
+      "type": "key_value_object",
+      "is_array": true
+    },
     "target": {
       "caption": "Target",
       "description": "The desired entity towards which the action is directed. Its values are derived via business logic. This usually represents the inferred destination entity for a logon.",
