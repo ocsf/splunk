@@ -1,0 +1,94 @@
+{
+  "description": "The extended/enriched Email object.",
+  "extends": "email",
+  "profiles": [
+    "splunk/ba"
+  ],
+  "references": [{"url": "https://d3fend.mitre.org/dao/artifact/d3f:Email/", "description": "D3FEND™ Ontology d3f:Email."}],
+  "attributes": {
+    "account": {
+      "description": "The user's account or the account associated with the user.",
+      "requirement": "optional"
+    },
+    "domains": {
+      "requirement": "optional",
+      "description": "The domain names seen in the email. For example <code>www.w3.org</code> or <code>ocsf.io</code>."
+    },
+    "email_addresses": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "end_date": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "files": {
+      "requirement": "optional",
+      "description": "The files embedded or attached to the email."
+    },
+    "forward_addr": {
+      "requirement": "optional"
+    },
+    "from": {
+      "requirement": "recommended"
+    },
+    "full_name": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "home_folder": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "labels": {
+      "description": "The list of labels attached to the user.",
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "location": {
+      "description": "The geographical location of the user's office.",
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "managed_by": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "nicknames": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "phones": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "privileges": {
+      "description": "The user privileges.",
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "shell": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "start_date": {
+      "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "to": {
+      "requirement": "recommended"
+    },
+    "urls": {
+      "requirement": "optional",
+      "description": "The URLs embedded in the email."
+    }
+  },
+  "constraints": {
+    "at_least_one": [
+      "from",
+      "to",
+      "smtp_from",
+      "smtp_to"
+    ]
+  }
+}
