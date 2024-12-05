@@ -128,6 +128,17 @@
       "is_array": true,
       "type": "device"
     },
+    "domain": {
+      "caption": "Domain",
+      "description": "The name of the domain. See specific usage.",
+      "type": "string_t"
+    },
+    "domains": {
+      "caption": "Domains",
+      "description": "The domains that pertain to the event or object. See specific usage.",
+      "type": "string_t",
+      "is_array": true
+    },
     "email_addresses": {
       "caption": "Email Addresses",
       "description": "The user's additional email addresses.",
@@ -217,6 +228,12 @@
           "caption": "Other"
         }
       }
+    },
+    "files": {
+      "caption": "Files",
+      "description": "The files that are part of the event or object.",
+      "type": "file",
+      "is_array": true
     },
     "finding_info": {
       "caption": "Finding Information",
@@ -394,6 +411,12 @@
     "managed_by": {
       "caption": "Managed By",
       "description": "The distinguished name of the user that is assigned to manage this object.",
+      "type": "string_t"
+    },
+    "message_trace_uid": {
+      "caption": "Message Trace UID",
+      "description": "The identifier that tracks a message that travels through multiple points of a messaging service.",
+      "references": [{"url": "https://learn.microsoft.com/en-us/previous-versions/office/developer/o365-enterprise-developers/jj984335(v=office.15)", "description": "For example Office 365 Message Trace Report."}],
       "type": "string_t"
     },
     "nicknames": {
@@ -613,6 +636,12 @@
       "description": "The normalized tunnel type ID.",
       "sibling": "tunnel_type",
       "type": "integer_t"
+    },
+    "urls": {
+      "caption": "URLs",
+      "description": "The URLs that pertain to the event or object.",
+      "type": "url",
+      "is_array": true
     },
     "users": {
       "caption": "Users",
