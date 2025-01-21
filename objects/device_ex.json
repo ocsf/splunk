@@ -88,6 +88,10 @@
         }
       },
       "requirement": "recommended"
+    },
+    "uid_alt": {
+      "description": "An alternate unique identifier of the device if any. For example the ActiveDirectory DN.",
+      "requirement": "optional"
     }
   }
 }

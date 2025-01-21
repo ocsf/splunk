@@ -637,6 +637,11 @@
       "sibling": "tunnel_type",
       "type": "integer_t"
     },
+    "uid_alt": {
+      "caption": "Alternate ID",
+      "description": "The alternate unique identifier. See specific usage.",
+      "type": "string_t"
+    },
     "urls": {
       "caption": "URLs",
       "description": "The URLs that pertain to the event or object.",
