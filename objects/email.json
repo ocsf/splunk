@@ -19,6 +19,19 @@
       "description": "The user's account or the account associated with the user.",
       "requirement": "optional"
     },
+    "cc_mailboxes": {
+      "requirement": "optional"
+    },
+    "delivered_to": {
+      "@deprecated": {
+        "message": "Use the <code> delivered_to_list </code> attribute instead.",
+        "since": "1.4.0"
+      },
+      "requirement": "optional"
+    },
+    "delivered_to_list": {
+      "requirement": "optional"
+    },
     "domains": {
       "requirement": "optional",
       "description": "The domain names seen in the email. For example <code>www.w3.org</code> or <code>ocsf.io</code>."
