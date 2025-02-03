@@ -10,10 +10,6 @@
       "description": "The user's account or the account associated with the user.",
       "requirement": "optional"
     },
-    "domains": {
-      "requirement": "optional",
-      "description": "The domain names seen in the email. For example <code>www.w3.org</code> or <code>ocsf.io</code>."
-    },
     "email_addresses": {
       "profile": "splunk/ba",
       "requirement": "optional"
