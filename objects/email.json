@@ -4,11 +4,20 @@
   "profiles": [
     "splunk/ba"
   ],
-  "references": [{"url": "https://d3fend.mitre.org/dao/artifact/d3f:Email/", "description": "D3FEND™ Ontology d3f:Email."}],
+  "references": [
+    {
+      "url": "https://d3fend.mitre.org/dao/artifact/d3f:Email/",
+      "description": "D3FEND™ Ontology d3f:Email."
+    }
+  ],
   "attributes": {
     "account": {
       "description": "The user's account or the account associated with the user.",
       "requirement": "optional"
+    },
+    "domains": {
+      "requirement": "optional",
+      "description": "The domain names seen in the email. For example <code>www.w3.org</code> or <code>ocsf.io</code>."
     },
     "email_addresses": {
       "profile": "splunk/ba",
@@ -34,6 +43,9 @@
     },
     "home_folder": {
       "profile": "splunk/ba",
+      "requirement": "optional"
+    },
+    "http_headers": {
       "requirement": "optional"
     },
     "labels": {
