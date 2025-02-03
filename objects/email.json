@@ -2,7 +2,8 @@
   "description": "The extended/enriched Email object.",
   "extends": "email",
   "profiles": [
-    "splunk/ba"
+    "splunk/ba",
+    "data_classification"
   ],
   "references": [
     {
@@ -11,6 +12,9 @@
     }
   ],
   "attributes": {
+    "$include": [
+      "profiles/data_classification.json"
+    ],
     "account": {
       "description": "The user's account or the account associated with the user.",
       "requirement": "optional"
@@ -86,11 +90,11 @@
     "to": {
       "requirement": "recommended"
     },
-    "urls": {
-      "description": "The URLs embedded in the email.",
+    "to_mailboxes": {
       "requirement": "optional"
     },
-    "x_originating_ip": {
+    "urls": {
+      "description": "The URLs embedded in the email.",
       "requirement": "optional"
     }
   },
