@@ -64,6 +64,9 @@
     "http_headers": {
       "requirement": "optional"
     },
+    "message_uid": {
+      "requirement": "recommended"
+    },
     "labels": {
       "description": "The list of labels attached to the user.",
       "profile": "splunk/ba",
