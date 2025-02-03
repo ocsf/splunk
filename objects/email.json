@@ -155,6 +155,9 @@
     "urls": {
       "description": "The URLs embedded in the email.",
       "requirement": "optional"
+    },
+    "x_originating_ip": {
+      "requirement": "optional"
     }
   },
   "constraints": {
