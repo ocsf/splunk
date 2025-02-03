@@ -6,18 +6,44 @@
   ],
   "attributes": {
     "activity_id": {
+      "requirement": "required",
       "enum": {
+        "1": {
+          "caption": "Send"
+        },
+        "2": {
+          "caption": "Receive"
+        },
+        "3": {
+          "caption": "Scan",
+          "description": "Email being scanned (example: security scanning)"
+        },
         "4": {
           "caption": "Trace",
           "description": "Follow an email message as it travels through an organization. The <code>message_trace_uid</code> should be populated when selected.",
-          "references": [{"url": "href='https://learn.microsoft.com/en-us/Exchange/monitoring/trace-an-email-message/message-trace-modern-eac", "description": "For example Office 365 Email Message Trace"}]
+          "references": [
+            {
+              "description": "For example Office 365 Email Message Trace",
+              "url": "href='https://learn.microsoft.com/en-us/Exchange/monitoring/trace-an-email-message/message-trace-modern-eac"
+            }
+          ]
         }
       }
+    },
+    "command": {
+      "description": "The command issued by the initiator (client), such as SMTP HELO or EHLO.",
+      "group": "primary",
+      "requirement": "recommended"
     },
     "email_uid": {
       "group": "primary"
     },
     "message_trace_uid": {
+      "group": "primary",
+      "requirement": "recommended"
+    },
+    "protocol_name": {
+      "description": "The Protocol Name specifies the email communication protocol, such as SMTP, IMAP, or POP3.",
       "group": "primary",
       "requirement": "recommended"
     }
