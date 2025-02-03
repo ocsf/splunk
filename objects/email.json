@@ -4,7 +4,12 @@
   "profiles": [
     "splunk/ba"
   ],
-  "references": [{"url": "https://d3fend.mitre.org/dao/artifact/d3f:Email/", "description": "D3FEND™ Ontology d3f:Email."}],
+  "references": [
+    {
+      "url": "https://d3fend.mitre.org/dao/artifact/d3f:Email/",
+      "description": "D3FEND™ Ontology d3f:Email."
+    }
+  ],
   "attributes": {
     "account": {
       "description": "The user's account or the account associated with the user.",
