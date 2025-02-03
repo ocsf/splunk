@@ -50,6 +50,9 @@
     "from": {
       "requirement": "recommended"
     },
+    "from_mailbox": {
+      "requirement": "optional"
+    },
     "full_name": {
       "profile": "splunk/ba",
       "requirement": "optional"
@@ -88,6 +91,16 @@
       "profile": "splunk/ba",
       "requirement": "optional"
     },
+    "reply_to": {
+      "@deprecated": {
+        "message": "Use the <code> reply_to_mailboxes </code> attribute instead.",
+        "since": "1.4.0"
+      },
+      "requirement": "recommended"
+    },
+    "reply_to_mailboxes": {
+      "requirement": "optional"
+    },
     "shell": {
       "profile": "splunk/ba",
       "requirement": "optional"
@@ -101,6 +114,11 @@
     },
     "to_mailboxes": {
       "requirement": "optional"
+    },
+    "uid": {
+      "caption": "Email Thread UID",
+      "description": "The unique identifier of the email thread.",
+      "requirement": "recommended"
     },
     "urls": {
       "description": "The URLs embedded in the email.",
