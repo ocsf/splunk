@@ -19,6 +19,9 @@
       "description": "The user's account or the account associated with the user.",
       "requirement": "optional"
     },
+    "cc": {
+      "requirement": "optional"
+    },
     "cc_mailboxes": {
       "requirement": "optional"
     },
@@ -42,9 +45,6 @@
     },
     "files": {
       "description": "The files embedded or attached to the email.",
-      "requirement": "optional"
-    },
-    "forward_addr": {
       "requirement": "optional"
     },
     "from": {
