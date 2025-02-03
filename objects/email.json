@@ -108,6 +108,10 @@
       "profile": "splunk/ba",
       "requirement": "optional"
     },
+    "size": {
+      "description": "The size in bytes of the email, including attachments.",
+      "requirement": "recommended"
+    },
     "start_date": {
       "profile": "splunk/ba",
       "requirement": "optional"
