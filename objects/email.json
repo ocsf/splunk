@@ -28,8 +28,8 @@
       "requirement": "optional"
     },
     "files": {
-      "requirement": "optional",
-      "description": "The files embedded or attached to the email."
+      "description": "The files embedded or attached to the email.",
+      "requirement": "optional"
     },
     "forward_addr": {
       "requirement": "optional"
@@ -87,8 +87,11 @@
       "requirement": "recommended"
     },
     "urls": {
-      "requirement": "optional",
-      "description": "The URLs embedded in the email."
+      "description": "The URLs embedded in the email.",
+      "requirement": "optional"
+    },
+    "x_originating_ip": {
+      "requirement": "optional"
     }
   },
   "constraints": {
