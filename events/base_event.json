@@ -8,6 +8,51 @@
   "attributes": {
     "$include": [
       "profiles/ba.json"
-    ]
+    ],
+    "duration": {
+      "description": "The event duration or aggregate time, the amount of time the event covers from <code>start_time</code> to <code>end_time</code> in milliseconds.",
+      "group": "occurrence",
+      "requirement": "optional"
+    },
+    "message": {
+      "group": "primary",
+      "requirement": "recommended"
+    },
+    "metadata": {
+      "group": "context",
+      "requirement": "required"
+    },
+    "observables": {
+      "group": "primary",
+      "requirement": "recommended"
+    },
+    "raw_data": {
+      "group": "context",
+      "requirement": "optional"
+    },
+    "status": {
+      "group": "primary",
+      "requirement": "recommended"
+    },
+    "status_code": {
+      "group": "primary",
+      "requirement": "recommended"
+    },
+    "status_detail": {
+      "group": "primary",
+      "requirement": "recommended"
+    },
+    "status_id": {
+      "group": "primary",
+      "requirement": "recommended"
+    },
+    "time": {
+      "group": "occurrence",
+      "requirement": "required"
+    },
+    "type_name": {
+      "group": "classification",
+      "requirement": "optional"
+    }
   }
 }

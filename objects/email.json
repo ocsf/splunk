@@ -2,7 +2,8 @@
   "description": "The extended/enriched Email object.",
   "extends": "email",
   "profiles": [
-    "splunk/ba"
+    "splunk/ba",
+    "data_classification"
   ],
   "references": [
     {
@@ -11,13 +12,28 @@
     }
   ],
   "attributes": {
+    "$include": [
+      "profiles/data_classification.json"
+    ],
     "account": {
       "description": "The user's account or the account associated with the user.",
       "requirement": "optional"
     },
-    "domains": {
-      "requirement": "optional",
-      "description": "The domain names seen in the email. For example <code>www.w3.org</code> or <code>ocsf.io</code>."
+    "cc": {
+      "requirement": "optional"
+    },
+    "cc_mailboxes": {
+      "requirement": "optional"
+    },
+    "delivered_to": {
+      "@deprecated": {
+        "message": "Use the <code> delivered_to_list </code> attribute instead.",
+        "since": "1.4.0"
+      },
+      "requirement": "optional"
+    },
+    "delivered_to_list": {
+      "requirement": "optional"
     },
     "email_addresses": {
       "profile": "splunk/ba",
@@ -28,14 +44,14 @@
       "requirement": "optional"
     },
     "files": {
-      "requirement": "optional",
-      "description": "The files embedded or attached to the email."
-    },
-    "forward_addr": {
+      "description": "The files embedded or attached to the email.",
       "requirement": "optional"
     },
     "from": {
       "requirement": "recommended"
+    },
+    "from_mailbox": {
+      "requirement": "optional"
     },
     "full_name": {
       "profile": "splunk/ba",
@@ -44,6 +60,12 @@
     "home_folder": {
       "profile": "splunk/ba",
       "requirement": "optional"
+    },
+    "http_headers": {
+      "requirement": "optional"
+    },
+    "message_uid": {
+      "requirement": "recommended"
     },
     "labels": {
       "description": "The list of labels attached to the user.",
@@ -72,28 +94,76 @@
       "profile": "splunk/ba",
       "requirement": "optional"
     },
+    "reply_to": {
+      "@deprecated": {
+        "message": "Use the <code> reply_to_mailboxes </code> attribute instead.",
+        "since": "1.4.0"
+      },
+      "requirement": "recommended"
+    },
+    "reply_to_mailboxes": {
+      "requirement": "optional"
+    },
     "shell": {
       "profile": "splunk/ba",
       "requirement": "optional"
+    },
+    "size": {
+      "description": "The size in bytes of the email, including attachments.",
+      "requirement": "recommended"
+    },
+    "smtp_from": {
+      "@deprecated": {
+        "message": "Use the <code> from </code> attribute instead.",
+        "since": "1.4.0"
+      },
+      "requirement": "recommended"
+    },
+    "smtp_to": {
+      "@deprecated": {
+        "message": "Use the <code> to </code> attribute instead.",
+        "since": "1.4.0"
+      },
+      "requirement": "recommended"
     },
     "start_date": {
       "profile": "splunk/ba",
       "requirement": "optional"
     },
+    "subject": {
+      "caption": "Subject",
+      "description": "The email header Subject value, as defined by RFC 5322.",
+      "references": [
+        {
+          "description": "RFC 5322",
+          "url": "https://www.rfc-editor.org/rfc/rfc5322"
+        }
+      ],
+      "requirement": "recommended"
+    },
     "to": {
       "requirement": "recommended"
     },
+    "to_mailboxes": {
+      "requirement": "optional"
+    },
+    "uid": {
+      "caption": "Email Thread UID",
+      "description": "The unique identifier of the email thread.",
+      "requirement": "recommended"
+    },
     "urls": {
-      "requirement": "optional",
-      "description": "The URLs embedded in the email."
+      "description": "The URLs embedded in the email.",
+      "requirement": "optional"
+    },
+    "x_originating_ip": {
+      "requirement": "optional"
     }
   },
   "constraints": {
     "at_least_one": [
       "from",
-      "to",
-      "smtp_from",
-      "smtp_to"
+      "to"
     ]
   }
 }

@@ -30,6 +30,11 @@
       "type": "auth_factor",
       "is_array": true
     },
+    "banner": {
+      "caption": "Protocol Banner",
+      "description": "The initial connection response that a messaging server receives after it connects to an email server.",
+      "type": "string_t"
+    },
     "caller": {
       "caption": "Caller",
       "description": "The point of origin from which the action was directed. Its values are derived via business logic. This usually represents the inferred source entity for a logon.",
@@ -45,6 +50,30 @@
       "description": "The normalized identifier of the object category. See specific usage.",
       "sibling": "category",
       "type": "integer_t"
+    },
+    "cc": {
+      "caption": "Cc",
+      "description": "The machine-readable email header Cc values, as defined by RFC 5322. For example <code>example.user@usersdomain.com</code>.",
+      "type": "email_t",
+      "references": [
+        {
+          "description": "RFC 5322",
+          "url": "https://www.rfc-editor.org/rfc/rfc5322"
+        }
+      ],
+      "is_array": true
+    },
+    "cc_mailboxes": {
+      "caption": "Cc Mailboxes",
+      "description": "The human-readable email header Cc Mailbox values. For example <code>'Example User &lt;example.user@usersdomain.com&gt;'</code>.",
+      "type": "string_t",
+      "references": [
+        {
+          "description": "RFC 5322",
+          "url": "https://www.rfc-editor.org/rfc/rfc5322#section-3.4"
+        }
+      ],
+      "is_array": true
     },
     "client_interface": {
       "caption": "Client Interface",
@@ -122,6 +151,27 @@
       "is_array": true,
       "type": "string_t"
     },
+    "delivered_to": {
+      "caption": "Delivered To",
+      "description": "The machine-readable <strong>Delivered-To</strong> email header field. For example <code>example.user@usersdomain.com</code>",
+      "type": "email_t",
+      "@deprecated": {
+        "message": "Use the <code>delivered_to_list</code> attribute instead.",
+        "since": "1.4.0"
+      }
+    },
+    "delivered_to_list": {
+      "caption": "Delivered To",
+      "description": "The machine-readable <strong>Delivered-To</strong> email header values. For example <code>example.user@usersdomain.com</code>",
+      "type": "email_t",
+      "references": [
+        {
+          "description": "RFC 9228",
+          "url": "https://www.rfc-editor.org/rfc/rfc9228"
+        }
+      ],
+      "is_array": true
+    },
     "devices": {
       "caption": "Devices",
       "description": "The devices that are identified in reported the events.",
@@ -138,6 +188,11 @@
       "description": "The domains that pertain to the event or object. See specific usage.",
       "type": "string_t",
       "is_array": true
+    },
+    "duration": {
+      "caption": "Duration Milliseconds",
+      "description": "This represents the duration of the activity in milliseconds. See specific usage.",
+      "type": "long_t"
     },
     "email_addresses": {
       "caption": "Email Addresses",
@@ -244,6 +299,28 @@
       "caption": "Forwarding Address",
       "description": "The user's forwarding email address.",
       "type": "email_t"
+    },
+    "from": {
+      "caption": "From",
+      "description": "The machine-readable email header From values, as defined by RFC 5322. For example <code>example.user@usersdomain.com</code>",
+      "type": "email_t",
+      "references": [
+        {
+          "description": "RFC 5322",
+          "url": "https://www.rfc-editor.org/rfc/rfc5322"
+        }
+      ]
+    },
+    "from_mailbox": {
+      "caption": "From Mailbox",
+      "description": "The human-readable email header From Mailbox value. For example <code>'Example User &lt;example.user@usersdomain.com&gt;'</code>.",
+      "type": "string_t",
+      "references": [
+        {
+          "description": "RFC 5322",
+          "url": "https://www.rfc-editor.org/rfc/rfc5322#section-3.4"
+        }
+      ]
     },
     "full_name": {
       "caption": "Full Name",
@@ -413,11 +490,21 @@
       "description": "The distinguished name of the user that is assigned to manage this object.",
       "type": "string_t"
     },
+    "message": {
+      "caption": "Message",
+      "description": "The description of the event/finding, as defined by the source.",
+      "type": "string_t"
+    },
     "message_trace_uid": {
       "caption": "Message Trace UID",
       "description": "The identifier that tracks a message that travels through multiple points of a messaging service.",
       "references": [{"url": "https://learn.microsoft.com/en-us/previous-versions/office/developer/o365-enterprise-developers/jj984335(v=office.15)", "description": "For example Office 365 Message Trace Report."}],
       "type": "string_t"
+    },
+    "metadata": {
+      "caption": "Metadata",
+      "description": "The metadata associated with the event or a finding.",
+      "type": "metadata"
     },
     "nicknames": {
       "caption": "Nicknames",
@@ -441,6 +528,18 @@
       "caption": "Number",
       "description": "The number of the entity. See specific usage.",
       "type": "integer_t"
+    },
+    "observables": {
+      "caption": "Observables",
+      "description": "The observables associated with the event or a finding.",
+      "type": "observable",
+      "references": [
+        {
+          "description": "OCSF Observables FAQ",
+          "url": "https://github.com/ocsf/ocsf-docs/blob/main/Articles/Defining and Using Observables.md"
+        }
+      ],
+      "is_array": true
     },
     "org": {
       "caption": "Organization",
@@ -533,11 +632,43 @@
       "description": "The public IP address of an endpoint or a device.",
       "type": "ip_t"
     },
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The raw event/finding data as received from the source.",
+      "type": "string_t"
+    },
     "related_analytics": {
       "caption": "Related Analytics",
       "description": "Describes analytics related to the analytic of a finding or detection as identified by the security product.",
       "is_array": true,
       "type": "analytic"
+    },
+    "reply_to": {
+      "caption": "Reply To",
+      "description": "The machine-readable email header Reply-To values, as defined by RFC 5322. For example <code>example.user@usersdomain.com</code>",
+      "type": "email_t",
+      "@deprecated": {
+        "message": "Use the <code>reply_to_mailboxes</code> attribute instead.",
+        "since": "1.4.0"
+      },
+      "references": [
+        {
+          "description": "RFC 5322",
+          "url": "https://www.rfc-editor.org/rfc/rfc5322"
+        }
+      ]
+    },
+    "reply_to_mailboxes": {
+      "caption": "Reply To Mailboxes",
+      "description": "The human-readable email header Reply To Mailbox values. For example <code>'Example User &lt;example.user@usersdomain.com&gt;'</code>.",
+      "type": "string_t",
+      "references": [
+        {
+          "description": "RFC 5322",
+          "url": "https://www.rfc-editor.org/rfc/rfc5322#section-3.4"
+        }
+      ],
+      "is_array": true
     },
     "risk_details": {
       "caption": "Risk Details",
@@ -605,6 +736,39 @@
       "description": "The start date of a user's employment.",
       "type": "timestamp_t"
     },
+    "status_detail": {
+      "caption": "Status Detail",
+      "description": "The status detail contains additional information about the event/finding outcome.",
+      "type": "string_t"
+    },
+    "status_details": {
+      "caption": "Status Details",
+      "description": "A list of descriptions, containing additional information about the event/finding status.",
+      "type": "string_t",
+      "is_array": true
+    },
+    "status_id": {
+      "caption": "Status ID",
+      "description": "The normalized identifier of the event status.",
+      "sibling": "status",
+      "type": "integer_t",
+      "enum": {
+        "0": {
+          "caption": "Unknown",
+          "description": "The status is unknown."
+        },
+        "1": {
+          "caption": "Success"
+        },
+        "2": {
+          "caption": "Failure"
+        },
+        "99": {
+          "caption": "Other",
+          "description": "The event status is not mapped. See the <code>status</code> attribute, which contains a data source specific value."
+        }
+      }
+    },
     "tags": {
       "caption": "Tags",
       "description": "The list of tags; <code>{key:value}</code> pairs attached to an entity. A Tag may be used to categorize, filter, and search for entities. For e.g. <code>\"Environment\": \"Production\"</code>, <code>\"Owner\": \"007\"</code>. See specific usage.",
@@ -615,6 +779,23 @@
       "caption": "Target",
       "description": "The desired entity towards which the action is directed. Its values are derived via business logic. This usually represents the inferred destination entity for a logon.",
       "type": "inference"
+    },
+    "time": {
+      "caption": "Event Time",
+      "description": "The normalized event occurrence time or the finding creation time.",
+      "type": "timestamp_t"
+    },
+    "to_mailboxes": {
+      "caption": "To Mailboxes",
+      "description": "The human-readable email header To Mailbox values. For example <code>'Example User &lt;example.user@usersdomain.com&gt;'</code>.",
+      "type": "string_t",
+      "references": [
+        {
+          "description": "RFC 5322",
+          "url": "https://www.rfc-editor.org/rfc/rfc5322#section-3.4"
+        }
+      ],
+      "is_array": true
     },
     "transmit_time": {
       "caption": "Transmission Time",
@@ -636,6 +817,11 @@
       "description": "The normalized tunnel type ID.",
       "sibling": "tunnel_type",
       "type": "integer_t"
+    },
+    "type_name": {
+      "caption": "Type Name",
+      "description": "The event/finding type name, as defined by the type_uid.",
+      "type": "string_t"
     },
     "uid_alt": {
       "caption": "Alternate ID",
