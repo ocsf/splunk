@@ -4,5 +4,21 @@
   "extends": "audit",
   "name": "audit_base",
   "uid": 0,
-  "attributes": {}
+  "attributes": {
+    "http_request": {
+      "description": "Details about the underlying HTTP request.",
+      "group": "context",
+      "requirement": "optional"
+    },
+    "http_response": {
+      "description": "Details about the underlying HTTP response.",
+      "group": "context",
+      "requirement": "optional"
+    },
+    "src_endpoint": {
+      "description": "Details about the source of the IAM activity.",
+      "group": "primary",
+      "requirement": "recommended"
+    }
+  }
 }
