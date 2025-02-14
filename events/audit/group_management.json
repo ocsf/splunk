@@ -1,27 +1,35 @@
 {
+  "uid": 6,
   "caption": "Group Management",
   "description": "Group Management events report management updates to a group, including updates to membership and permissions.",
   "extends": "audit_base",
   "name": "group_management",
-  "uid": 6,
   "attributes": {
     "activity_id": {
       "enum": {
         "1": {
-          "description": "Assign privileges to a group.",
-          "caption": "Assign Privileges"
+          "caption": "Assign Privileges",
+          "description": "Assign privileges to a group."
         },
         "2": {
-          "description": "Revoke privileges from a group.",
-          "caption": "Revoke Privileges"
+          "caption": "Revoke Privileges",
+          "description": "Revoke privileges from a group."
         },
         "3": {
-          "description": "Add user to a group.",
-          "caption": "Add User"
+          "caption": "Add User",
+          "description": "Add user to a group."
         },
         "4": {
-          "description": "Remove user from a group.",
-          "caption": "Remove User"
+          "caption": "Remove User",
+          "description": "Remove user from a group."
+        },
+        "5": {
+          "caption": "Delete",
+          "description": "A group was deleted."
+        },
+        "6": {
+          "caption": "Create",
+          "description": "A group was created."
         }
       }
     },
@@ -32,6 +40,11 @@
     },
     "privileges": {
       "description": "A list of privileges assigned to the group.",
+      "group": "primary",
+      "requirement": "recommended"
+    },
+    "resource": {
+      "description": "Resource that the privileges give access to.",
       "group": "primary",
       "requirement": "recommended"
     },
