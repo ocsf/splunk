@@ -178,6 +178,11 @@
       "is_array": true,
       "type": "device"
     },
+    "display_name": {
+      "caption": "Display Name",
+      "description": "The display name. See specific usage.",
+      "type": "string_t"
+    },
     "domain": {
       "caption": "Domain",
       "description": "The name of the domain. See specific usage.",
@@ -324,7 +329,7 @@
     },
     "full_name": {
       "caption": "Full Name",
-      "description": "The user's full name.",
+      "description": "The full name. See specific usage.",
       "type": "string_t"
     },
     "geohash": {
