@@ -19,6 +19,11 @@
       "is_array": true,
       "type": "string_t"
     },
+    "authentication_token": {
+      "caption": "Authentication Token",
+      "description": "The authentication token, ticket, or assertion. See specific usage.",
+      "type": "authentication_token"
+    },
     "autonomous_system": {
       "caption": "Autonomous System",
       "description": "The Autonomous System details associated with an IP address.",
@@ -204,6 +209,11 @@
       "description": "The user's additional email addresses.",
       "is_array": true,
       "type": "email_t"
+    },
+    "encryption_details": {
+      "caption": "Encryption Details",
+      "description": "The encryption details of a file or other content. See specific usage.",
+      "type": "encryption_details"
     },
     "end_date": {
       "caption": "End Date",
@@ -403,6 +413,11 @@
       "description": "Indicates logon is from a device not seen before or a first time account logon.",
       "type": "boolean_t"
     },
+    "is_renewable": {
+      "caption": "Renewable",
+      "description": "The indication of whether something is renewable. See specific usage.",
+      "type": "boolean_t"
+    },
     "is_vpn": {
       "caption": "VPN Session",
       "description": "The indication of whether the session is a VPN session.",
@@ -412,6 +427,21 @@
       "caption": "Time-based One-time Password (TOTP)",
       "description": "Whether the authentication factor is a Time-based One-time Password (TOTP).",
       "type": "boolean_t"
+    },
+    "kerberos_flags": {
+      "caption": "Kerberos Flags",
+      "description": "A bitmask, either in hexadecimal or decimal form, which encodes various attributes or permissions associated with a Kerberos ticket. These flags delineate specific characteristics of the ticket, such as its renewability or forwardability.",
+      "references": [
+        {
+          "description": "RFC 4120: 5.2.8.  KerberosFlags",
+          "url": "https://www.rfc-editor.org/rfc/rfc4120#section-5.2.8"
+        },
+        {
+          "description": "Microsoft Windows Security 4769 (see 'Ticket Options')",
+          "url": "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4769"
+        }
+      ],
+      "type": "string_t"
     },
     "kill_chain": {
       "caption": "Kill Chain",
