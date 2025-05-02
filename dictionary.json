@@ -443,6 +443,11 @@
       ],
       "type": "string_t"
     },
+    "key_uid": {
+      "caption": "Key UID",
+      "description": "The unique identifier of the key. See specific usage.",
+      "type": "string_t"
+    },
     "kill_chain": {
       "caption": "Kill Chain",
       "description": "The <a target='_blank' href='https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html'>Cyber Kill Chain®</a>.",
