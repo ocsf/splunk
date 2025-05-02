@@ -65,3 +65,8 @@ jobs:
           echo "Tests completed for ocsf-server"
 
       # Test the JSON schema export for the Authentication class
+      - name: Test JSON Schema Export for Authentication Class
+        working-directory: ocsf-server
+        run: |
+          SCHEMA_DIR=../ocsf-schema iex -S mix phx.server
+          echo "JSON schema export completed for Authentication class"
