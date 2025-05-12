@@ -85,6 +85,18 @@
       "description": "The client interface. See specific usage.",
       "type": "network_interface"
     },
+    "community_uid": {
+      "caption": "Community ID",
+      "description": "The Community ID of the network connection.",
+      "source": "community_id",
+      "type": "string_t",
+      "references": [
+        {
+          "description": "Community ID definition.",
+          "url": "https://github.com/corelight/community-id-spec"
+        }
+      ]
+    },
     "confidence_score": {
       "caption": "Confidence Score",
       "description": "The confidence score as reported by the event source.",
@@ -309,6 +321,17 @@
       "caption": "Finding Information",
       "description": "Describes the supporting information about a generated finding.",
       "type": "finding_info"
+    },
+    "flag_history": {
+      "caption": "Connection Flag History",
+      "description": "The Connection Flag History summarizes events in a network connection. For example flags <code> ShAD </code> representing SYN, SYN/ACK, ACK and Data exchange.",
+      "type": "string_t",
+      "references": [
+        {
+          "description": "Zeek History",
+          "url": "https://docs.zeek.org/en/master/scripts/base/protocols/conn/main.zeek.html#detailed-interface:~:text=Records%20the%20state%20history%20of%20connections%20as%20a%20string%20of%20letters.%20The%20meaning%20of%20those%20letters%20is"
+        }
+      ]
     },
     "forward_addr": {
       "caption": "Forwarding Address",
