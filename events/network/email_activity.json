@@ -6,7 +6,6 @@
   ],
   "attributes": {
     "activity_id": {
-      "requirement": "required",
       "enum": {
         "1": {
           "caption": "Send"
