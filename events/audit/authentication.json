@@ -61,6 +61,18 @@
       "group": "primary",
       "requirement": "recommended"
     },
+    "mfa": {
+      "group": "primary",
+      "requirement": "recommended",
+      "@deprecated": {
+        "message": "Use the <code>is_mfa</code> attribute instead.",
+        "since": "1.0.0"
+      }
+    },
+    "is_mfa": {
+      "group": "primary",
+      "requirement": "recommended"
+    },
     "is_new_logon": {
       "group": "context",
       "requirement": "optional"
