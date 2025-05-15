@@ -237,6 +237,11 @@
       "description": "The Event ID or Code that the product uses to describe the event.",
       "type": "string_t"
     },
+    "expiration_reason": {
+      "caption": "Expiration Reason",
+      "description": "The expiration reason. See specific usage.",
+      "type": "string_t"
+    },
     "evidence": {
       "caption": "Evidence",
       "description": "The data the detection exposes to the analyst.",
@@ -429,6 +434,11 @@
     "is_hotp": {
       "caption": "HMAC-based One-time Password (HOTP)",
       "description": "Whether the authentication factor is an HMAC-based One-time Password (HOTP).",
+      "type": "boolean_t"
+    },
+    "is_mfa": {
+      "caption": "Multi Factor Authentication",
+      "description": "Indicates whether Multi Factor Authentication was used during authentication.",
       "type": "boolean_t"
     },
     "is_new_logon": {
@@ -842,6 +852,11 @@
       "caption": "Target",
       "description": "The desired entity towards which the action is directed. Its values are derived via business logic. This usually represents the inferred destination entity for a logon.",
       "type": "inference"
+    },
+    "terminal": {
+      "caption": "Terminal",
+      "description": "The Pseudo Terminal. Ex: the tty or pts value.",
+      "type": "string_t"
     },
     "time": {
       "caption": "Event Time",
