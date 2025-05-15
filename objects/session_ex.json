@@ -2,12 +2,43 @@
   "description": "The extended/enriched session object.",
   "extends": "session",
   "attributes": {
+    "count": {
+      "description": "The number of identical sessions spawned from the same source IP, destination IP, application, and content/threat type seen over a period of time.",
+      "requirement": "optional"
+    },
+    "expiration_reason": {
+      "description": "The reason which triggered the session expiration.",
+      "requirement": "optional"
+    },
+    "mfa": {
+      "requirement": "optional",
+      "@deprecated": {
+        "message": "Use the <code>is_mfa</code> attribute instead.",
+        "since": "1.0.0"
+      }
+    },
+    "is_mfa": {
+      "requirement": "optional"
+    },
+    "is_remote": {
+      "requirement": "recommended"
+    },
     "is_vpn": {
+      "requirement": "optional"
+    },
+    "terminal": {
+      "description": "The Pseudo Terminal associated with the session. Ex: the tty or pts value.",
       "requirement": "optional"
     },
     "uid_alt": {
       "description": "The alternate unique identifier of the session. e.g. AWS ARN - <code>arn:aws:sts::123344444444:assumed-role/Admin/example-session</code>.",
       "requirement": "optional"
     }
-  }
+  },
+  "references": [
+    {
+      "description": "D3FEND™ Ontology d3f:Session",
+      "url": "https://d3fend.mitre.org/dao/artifact/d3f:Session/"
+    }
+  ]
 }
