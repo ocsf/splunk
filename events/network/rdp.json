@@ -102,5 +102,13 @@
       "group": "primary",
       "requirement": "recommended"
     }
+  },
+  "associations": {
+    "actor.user": [
+      "dst_endpoint"
+    ],
+    "dst_endpoint": [
+      "actor.user"
+    ]
   }
 }
