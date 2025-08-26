@@ -917,6 +917,12 @@
       "description": "The users that are identified in reported the events.",
       "is_array": true,
       "type": "user"
+    },
+    "vendor_id_list": {
+      "caption": "Vendor ID List",
+      "description": "The list of vendor IDs. See specific usage.",
+      "is_array": true,
+      "type": "string_t"
     }
   },
   "types": {
