@@ -743,6 +743,11 @@
       ],
       "is_array": true
     },
+    "reporter": {
+      "caption": "Reporter",
+      "description": "The entity from which an event or finding was first reported. See specific usage.",
+      "type": "reporter"
+    },
     "risk_details": {
       "caption": "Risk Details",
       "description": "Describes the risk associated with the finding.",
