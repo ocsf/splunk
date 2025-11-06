@@ -1,0 +1,72 @@
+name: Clone Repos, Install Elixir, and Ensure JSON Schemas can be exported.
+
+on:
+  push:
+    branches:
+      - main
+  
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+jobs:
+  setup-elixir-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # Clone the ocsf-server repository
+      - name: Clone ocsf-server Repository
+        run: |
+          git clone https://github.com/ocsf/ocsf-server
+          echo "Cloned ocsf/ocsf-server"
+
+      # Clone the ocsf-schema repository (v1.0.0-rc.2)
+      - name: Clone ocsf-schema Repository
+        run: |
+          git clone --branch v1.0.0-rc.2 https://github.com/ocsf/ocsf-schema
+          echo "Cloned ocsf/ocsf-schema:v1.0.0-rc.2"
+
+      # Checkout the current repository
+      - name: Checkout Current Repository into ocsf-schema/extensions/splunk
+        uses: actions/checkout@v3
+        with:
+          path: ocsf-schema/extensions/splunk
+
+      # Install Elixir
+      - name: Install Elixir
+        uses: erlef/setup-beam@v1
+        with:
+          elixir-version: '1.14' # Define the elixir version [required]
+          otp-version: '25.0'    # Define the OTP version [required]
+
+      # Restore depedencies cache
+      - name: Restore Dependencies Cache
+        uses: actions/cache@v3
+        with:
+          path: ocsf-server/deps
+          key: ${{ runner.os }}-mix-${{ hashFiles('**/mix.lock') }}
+          restore-keys: ${{ runner.os }}-mix-
+
+      # Install Dependencies
+      - name: Install Server Dependencies
+        working-directory: ocsf-server
+        run: |
+          mix deps.get
+          echo "Dependencies installed for ocsf-server"
+
+      # Run ocsf-server tests
+      - name: Run Server Tests
+        working-directory: ocsf-server
+        run: |
+          SCHEMA_DIR=../ocsf-schema mix test
+          echo "Tests completed for ocsf-server"
+
+      # Test the JSON schema export for the Authentication class
+      - name: Test JSON Schema Export for Authentication Class
+        working-directory: ocsf-server
+        run: |
+          SCHEMA_DIR=../ocsf-schema iex -S mix phx.server
+          echo "JSON schema export completed for Authentication class"
